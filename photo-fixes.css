@@ -1,0 +1,26 @@
+.gallery-grid img,
+.mini-gallery img {
+  object-fit: contain;
+  background: #070707;
+}
+
+.gallery-grid img {
+  padding: 0;
+}
+
+.mini-gallery img {
+  padding: 0;
+}
+
+.photo-universe img,
+.photo-fill {
+  object-position: center;
+}
+
+@media (max-width: 860px) {
+  .gallery-grid img,
+  .mini-gallery img {
+    aspect-ratio: auto;
+    max-height: none;
+  }
+}
