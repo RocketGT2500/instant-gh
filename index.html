@@ -159,18 +159,59 @@
         ['evenementiel-24.jpg', 'Lumière · Scène · Émotion'],
         ['portrait-11.jpg', 'Portrait · Présence · Instant']
       ];
+
+      const shuffle = array => {
+        const copy = [...array];
+        for (let i = copy.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [copy[i], copy[j]] = [copy[j], copy[i]];
+        }
+        return copy;
+      };
+
+      let heroSequence = shuffle(heroImages);
       let heroIndex = 0;
       const heroImg = document.getElementById('hero-carousel-image');
       const heroTitle = document.getElementById('hero-carousel-title');
-      setInterval(() => {
-        heroIndex = (heroIndex + 1) % heroImages.length;
-        heroImg.style.opacity = '0';
+
+      const preloadHero = src => {
+        const image = new Image();
+        image.src = src;
+      };
+
+      const applyHero = ([src, title], immediate = false) => {
+        if (immediate) {
+          heroImg.src = src;
+          heroTitle.textContent = title;
+          preloadHero(heroSequence[(heroIndex + 1) % heroSequence.length][0]);
+          return;
+        }
+
+        heroImg.classList.add('is-changing');
+        heroTitle.classList.add('is-changing');
+
         setTimeout(() => {
-          heroImg.src = heroImages[heroIndex][0];
-          heroTitle.textContent = heroImages[heroIndex][1];
-          heroImg.style.opacity = '0.92';
-        }, 250);
-      }, 4200);
+          heroImg.src = src;
+          heroTitle.textContent = title;
+          preloadHero(heroSequence[(heroIndex + 1) % heroSequence.length][0]);
+        }, 420);
+
+        setTimeout(() => {
+          heroImg.classList.remove('is-changing');
+          heroTitle.classList.remove('is-changing');
+        }, 620);
+      };
+
+      applyHero(heroSequence[heroIndex], true);
+
+      setInterval(() => {
+        heroIndex += 1;
+        if (heroIndex >= heroSequence.length) {
+          heroSequence = shuffle(heroImages);
+          heroIndex = 0;
+        }
+        applyHero(heroSequence[heroIndex]);
+      }, 5200);
     </script>
     <script src="script.js"></script>
   </body>
