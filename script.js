@@ -61,11 +61,8 @@ function applyGalleryOrder(categoryId, preferredOrder, newText) {
 applyGalleryOrder(
   "moto-mecanique",
   [
-    // Bloc 1 — motos en mouvement et portraits motards
     1, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20,
-    // Bloc 2 — détails moto / mécanique
     21, 22, 23, 24, 25, 26, 27, 28,
-    // Bloc 3 — détails auto et voitures de caractère
     2, 6, 7, 8, 4, 5, 14
   ],
   "Motos en action et portraits de motards, puis détails mécaniques et voitures de caractère."
@@ -74,13 +71,9 @@ applyGalleryOrder(
 applyGalleryOrder(
   "evenementiel",
   [
-    // Bloc 1 — concerts et scène
     24, 5, 7, 17, 18, 19, 20, 21, 22, 23, 1,
-    // Bloc 2 — Hellfest / festival / décors
     12, 13, 14, 15, 16, 3, 4, 11,
-    // Bloc 3 — reconstitution / médiéval
     6, 8, 10,
-    // Bloc 4 — ambiance isolée / paysage
     2
   ],
   "Concerts et scènes vivantes, puis festival, reconstitution et ambiances fortes."
@@ -115,7 +108,9 @@ lightbox.className = "lightbox";
 lightbox.setAttribute("aria-hidden", "true");
 lightbox.innerHTML = `
   <button class="lightbox-close" type="button" aria-label="Fermer l’image agrandie">×</button>
+  <button class="lightbox-nav lightbox-prev" type="button" aria-label="Photo précédente">‹</button>
   <img class="lightbox-image" src="" alt="" />
+  <button class="lightbox-nav lightbox-next" type="button" aria-label="Photo suivante">›</button>
   <p class="lightbox-caption"></p>
 `;
 document.body.appendChild(lightbox);
@@ -123,12 +118,34 @@ document.body.appendChild(lightbox);
 const lightboxImage = lightbox.querySelector(".lightbox-image");
 const lightboxCaption = lightbox.querySelector(".lightbox-caption");
 const lightboxClose = lightbox.querySelector(".lightbox-close");
+const lightboxPrev = lightbox.querySelector(".lightbox-prev");
+const lightboxNext = lightbox.querySelector(".lightbox-next");
+let activeGalleryImages = [];
+let activeLightboxIndex = 0;
+
+function setLightboxImage(index) {
+  if (!activeGalleryImages.length || !lightboxImage || !lightboxCaption) return;
+
+  activeLightboxIndex = (index + activeGalleryImages.length) % activeGalleryImages.length;
+  const img = activeGalleryImages[activeLightboxIndex];
+
+  lightboxImage.classList.add("is-changing");
+  window.setTimeout(() => {
+    lightboxImage.src = img.currentSrc || img.src;
+    lightboxImage.alt = img.alt || "Photographie Instant.GH";
+    lightboxCaption.textContent = `${activeLightboxIndex + 1} / ${activeGalleryImages.length} — ${img.alt || "Photographie Instant.GH"}`;
+    lightboxImage.classList.remove("is-changing");
+  }, 120);
+}
 
 function openLightbox(img) {
   if (!img || !lightboxImage || !lightboxCaption) return;
-  lightboxImage.src = img.currentSrc || img.src;
-  lightboxImage.alt = img.alt || "Photographie Instant.GH";
-  lightboxCaption.textContent = img.alt || "Photographie Instant.GH";
+
+  const gallery = img.closest(".category-gallery");
+  activeGalleryImages = gallery ? Array.from(gallery.querySelectorAll("img")) : [img];
+  activeLightboxIndex = Math.max(0, activeGalleryImages.indexOf(img));
+
+  setLightboxImage(activeLightboxIndex);
   lightbox.classList.add("open");
   lightbox.setAttribute("aria-hidden", "false");
   document.body.classList.add("lightbox-open");
@@ -139,12 +156,34 @@ function closeLightbox() {
   lightbox.setAttribute("aria-hidden", "true");
   document.body.classList.remove("lightbox-open");
   if (lightboxImage) lightboxImage.src = "";
+  activeGalleryImages = [];
+  activeLightboxIndex = 0;
+}
+
+function showPreviousPhoto() {
+  if (!lightbox.classList.contains("open")) return;
+  setLightboxImage(activeLightboxIndex - 1);
+}
+
+function showNextPhoto() {
+  if (!lightbox.classList.contains("open")) return;
+  setLightboxImage(activeLightboxIndex + 1);
 }
 
 document.addEventListener("click", (event) => {
   const galleryImage = event.target.closest(".category-gallery img");
   if (galleryImage) {
     openLightbox(galleryImage);
+    return;
+  }
+
+  if (event.target === lightboxPrev) {
+    showPreviousPhoto();
+    return;
+  }
+
+  if (event.target === lightboxNext) {
+    showNextPhoto();
     return;
   }
 
@@ -155,6 +194,21 @@ document.addEventListener("click", (event) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeLightbox();
+  if (event.key === "ArrowLeft") showPreviousPhoto();
+  if (event.key === "ArrowRight") showNextPhoto();
+});
+
+let touchStartX = null;
+lightbox.addEventListener("touchstart", (event) => {
+  touchStartX = event.changedTouches[0].clientX;
+});
+lightbox.addEventListener("touchend", (event) => {
+  if (touchStartX === null) return;
+  const distance = event.changedTouches[0].clientX - touchStartX;
+  if (Math.abs(distance) > 50) {
+    distance > 0 ? showPreviousPhoto() : showNextPhoto();
+  }
+  touchStartX = null;
 });
 
 const contactForm = document.querySelector(".contact-form");
