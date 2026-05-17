@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="photo-fixes.css" />
     <link rel="stylesheet" href="site-upgrades.css" />
+    <link rel="stylesheet" href="contact-form.css" />
   </head>
   <body>
     <header class="site-header" id="accueil">
@@ -37,7 +38,7 @@
           </div>
         </div>
         <div class="hero-card reveal photo-card-main">
-          <img id="hero-carousel-image" src="moto-mecanique-14.jpg" alt="Photographie Instant.GH" class="photo-fill" />
+          <img id="hero-carousel-image" src="moto-mecanique-14.jpg" alt="Photographie de terrain Instant.GH" class="photo-fill" />
           <div class="photo-overlay"><strong id="hero-carousel-title">Puissance · Mouvement · Terrain</strong></div>
         </div>
       </section>
@@ -56,8 +57,8 @@
       <section class="section dark" id="apropos">
         <div class="section-heading reveal"><p class="eyebrow">À propos</p><h2>Gallien, derrière Instant.GH.</h2></div>
         <div class="about-grid">
-          <article class="about-card reveal"><strong>Photographie de terrain</strong><p>Instant.GH est né d’une envie simple : transformer des scènes vécues sur le terrain en images fortes, sobres et lisibles. Moto, hockey, meetings aériens, concerts, animalier ou événements historiques : je privilégie les sujets où le mouvement, la lumière et l’émotion existent déjà.</p></article>
-          <article class="status-card reveal"><h3>Une approche directe</h3><p>Chaque série est construite pour raconter un sujet avec cohérence : une accroche forte, des détails, de l’action, une ambiance et une image finale mémorable.</p><p>Pour une collaboration, une série photo ou un événement à documenter, le contact reste simple et direct.</p></article>
+          <article class="about-card reveal"><strong>Photographie de terrain</strong><p>Je m’appelle Gallien, je suis basé entre Clisson et Cholet. La photographie est devenue pour moi une manière de garder les moments qui passent trop vite : un regard, une vitesse, une lumière, une émotion.</p><p>Avec Instant.GH, je construis des séries autour de sujets vivants et puissants : moto, sport, aviation, animalier, concerts et événements de terrain.</p></article>
+          <article class="status-card reveal"><h3>Une approche directe</h3><p>Mon approche reste simple : observer, cadrer, déclencher au moment où l’image devient évidente.</p><p>Chaque série est pensée pour raconter un sujet avec cohérence : une accroche forte, des détails, de l’action, une ambiance et une image finale mémorable.</p></article>
         </div>
       </section>
 
@@ -87,8 +88,23 @@
 
       <section class="contact-section" id="contact">
         <div class="contact-card reveal">
-          <div><p class="eyebrow">Contact</p><h2>Un projet, une série, un événement à couvrir.</h2><p>Pour une demande photo, une collaboration, un événement local ou une série à construire, vous pouvez me contacter directement par mail ou via Instagram.</p></div>
-          <div class="contact-actions"><a class="button primary" href="mailto:gallien.c@hotmail.fr">gallien.c@hotmail.fr</a><a class="button dark-button" href="https://www.instagram.com/instant.gh" target="_blank" rel="noreferrer">Instagram · instant.gh</a></div>
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Un projet, une série, un événement à couvrir.</h2>
+            <p>Décrivez simplement le sujet, le lieu, la période et l’usage souhaité des images. Je vous répondrai pour voir ce qu’il est possible de construire.</p>
+          </div>
+          <form class="contact-form" action="mailto:gallien.c@hotmail.fr" method="post" enctype="text/plain">
+            <div class="form-grid">
+              <label><span>Nom</span><input type="text" name="Nom" autocomplete="name" required /></label>
+              <label><span>Email</span><input type="email" name="Email" autocomplete="email" required /></label>
+              <label><span>Type de projet</span><select name="Type de projet"><option>Reportage événementiel</option><option>Série moto / mécanique</option><option>Sport / club</option><option>Portrait</option><option>Animalier</option><option>Concert / scène</option><option>Autre demande</option></select></label>
+              <label><span>Lieu / secteur</span><input type="text" name="Lieu" placeholder="Cholet, Nantes, Vendée..." /></label>
+              <label class="form-full"><span>Message</span><textarea name="Message" placeholder="Sujet, date, contexte, nombre de personnes, usage prévu des images..." required></textarea></label>
+              <input class="hidden-field" type="text" name="Site web" tabindex="-1" autocomplete="off" />
+            </div>
+            <p class="form-note">Le formulaire ouvre votre application mail avec le message prérempli. Vous pouvez aussi me contacter via Instagram.</p>
+            <button class="form-submit" type="submit">Préparer la demande</button>
+          </form>
         </div>
       </section>
     </main>
@@ -97,14 +113,24 @@
 
     <script>
       const categories = [
-        {id:'moto-mecanique', title:'Moto & mécanique', cover:'moto-mecanique-14.jpg', count:24, text:'Puissance mécanique, silhouettes, détails et sujets en mouvement.', tags:['portraits pilotes','action circuit','détails mécaniques','muscle cars']},
-        {id:'sport-collectifs', title:'Sport & collectifs', cover:'sport-collectifs-08.jpg', count:8, text:'Le sport comme sujet de tension collective : action, groupe, regard de match, coulisses.', tags:['hockey','action glace','portraits joueurs','coulisses']},
-        {id:'aviation', title:'Aviation', cover:'aviation-01.jpg', count:9, text:'Meetings aériens, patrouilles, acrobaties et machines de légende.', tags:['meetings aériens','acrobaties','vintage WWII']},
-        {id:'evenementiel', title:'Événementiel', cover:'evenementiel-24.jpg', count:24, text:'Concerts, festivals, scènes nocturnes et ambiances fortes.', tags:['concerts','festivals','événements nocturnes','reconstitution']},
-        {id:'defense-defiles', title:'Défense & défilés', cover:'defense-defiles-01.jpg', count:8, text:'Action, poussière, blindés, défilés et scènes de terrain.', tags:['blindés','défilés','cavalerie']},
-        {id:'animalier', title:'Animalier', cover:'animalier-01.jpg', count:11, text:'Regards, instinct, présence et détails naturels.', tags:['faune','oiseaux','macro','animaux de compagnie']},
-        {id:'portrait', title:'Portrait', cover:'portrait-11.jpg', count:11, text:'Portraits dynamiques, en situation, liés à un univers.', tags:['sportifs','musiciens','artisans','motards']}
+        {id:'moto-mecanique', title:'Moto & mécanique', cover:'moto-mecanique-14.jpg', images:[14,1,2,4,5,8,13,15,16,17,18,19,20,21,22,23,24,25,26,27,28], text:'Puissance mécanique, silhouettes, détails et sujets en mouvement.', tags:['portraits pilotes','action circuit','détails mécaniques','muscle cars']},
+        {id:'sport-collectifs', title:'Sport & collectifs', cover:'sport-collectifs-08.jpg', images:[8,1,2,3,4,5,6,7], text:'Le sport comme sujet de tension collective : action, groupe, regard de match, coulisses.', tags:['hockey','action glace','portraits joueurs','coulisses']},
+        {id:'aviation', title:'Aviation', cover:'aviation-01.jpg', images:[1,2,3,4,5,6,7,8,9], text:'Meetings aériens, patrouilles, acrobaties et machines de légende.', tags:['meetings aériens','acrobaties','vintage WWII']},
+        {id:'evenementiel', title:'Événementiel', cover:'evenementiel-24.jpg', images:[24,1,2,4,5,6,7,8,10,11,12,13,14,15,16,19,20,21,22,23], text:'Concerts, festivals, scènes nocturnes et ambiances fortes.', tags:['concerts','festivals','événements nocturnes','reconstitution']},
+        {id:'defense-defiles', title:'Défense & défilés', cover:'defense-defiles-01.jpg', images:[1,2,4,5,6,7,8], text:'Action, poussière, blindés, défilés et scènes de terrain.', tags:['blindés','défilés','cavalerie']},
+        {id:'animalier', title:'Animalier', cover:'animalier-01.jpg', images:[1,2,4,5,6,7,8,10], text:'Regards, instinct, présence et détails naturels.', tags:['faune','oiseaux','macro','animaux de compagnie']},
+        {id:'portrait', title:'Portrait', cover:'portrait-11.jpg', images:[11,1,2,3,4,5,6,7,8,9,10], text:'Portraits dynamiques, en situation, liés à un univers.', tags:['sportifs','musiciens','artisans','motards']}
       ];
+
+      const altTexts = {
+        'moto-mecanique':'Moto et mécanique, mouvement et détails, photographie Instant.GH en Pays de la Loire',
+        'sport-collectifs':'Sport collectif et hockey, action et ambiance de groupe, photographie Instant.GH',
+        'aviation':'Aviation et meeting aérien, appareil en vol, photographie Instant.GH',
+        'evenementiel':'Événement local, scène ou ambiance nocturne, photographie Instant.GH',
+        'defense-defiles':'Défense, défilé ou blindé en action, photographie Instant.GH',
+        'animalier':'Portrait animalier, regard et présence naturelle, photographie Instant.GH',
+        'portrait':'Portrait en situation, lumière et présence, photographie Instant.GH'
+      };
 
       const pad = n => String(n).padStart(2, '0');
       const imagePath = (cat, n) => `${cat.id}-${pad(n)}.jpg`;
@@ -115,9 +141,7 @@
         article.className = 'category-block reveal';
         article.id = cat.id;
         const tags = cat.tags.map(t => `<span>${t}</span>`).join('');
-        const coverNumber = Number((cat.cover.match(/-(\d+)\.jpg$/) || [])[1]);
-        const order = [coverNumber, ...Array.from({length: cat.count}, (_, i) => i + 1).filter(n => n !== coverNumber && n <= cat.count)].filter(Boolean);
-        const imgs = order.map(n => `<img loading="lazy" src="${imagePath(cat, n)}" alt="${cat.title} ${pad(n)} - Instant.GH" onerror="this.remove()" />`).join('');
+        const imgs = cat.images.map(n => `<img loading="lazy" src="${imagePath(cat, n)}" alt="${altTexts[cat.id]} ${pad(n)}" onerror="this.remove()" />`).join('');
         article.innerHTML = `
           <div class="category-head">
             <div><h3>${cat.title}</h3><p>${cat.text}</p></div>
@@ -174,42 +198,17 @@
       const heroImg = document.getElementById('hero-carousel-image');
       const heroTitle = document.getElementById('hero-carousel-title');
 
-      const preloadHero = src => {
-        const image = new Image();
-        image.src = src;
-      };
-
+      const preloadHero = src => { const image = new Image(); image.src = src; };
       const applyHero = ([src, title], immediate = false) => {
-        if (immediate) {
-          heroImg.src = src;
-          heroTitle.textContent = title;
-          preloadHero(heroSequence[(heroIndex + 1) % heroSequence.length][0]);
-          return;
-        }
-
-        heroImg.classList.add('is-changing');
-        heroTitle.classList.add('is-changing');
-
-        setTimeout(() => {
-          heroImg.src = src;
-          heroTitle.textContent = title;
-          preloadHero(heroSequence[(heroIndex + 1) % heroSequence.length][0]);
-        }, 420);
-
-        setTimeout(() => {
-          heroImg.classList.remove('is-changing');
-          heroTitle.classList.remove('is-changing');
-        }, 620);
+        if (immediate) { heroImg.src = src; heroTitle.textContent = title; preloadHero(heroSequence[(heroIndex + 1) % heroSequence.length][0]); return; }
+        heroImg.classList.add('is-changing'); heroTitle.classList.add('is-changing');
+        setTimeout(() => { heroImg.src = src; heroTitle.textContent = title; preloadHero(heroSequence[(heroIndex + 1) % heroSequence.length][0]); }, 420);
+        setTimeout(() => { heroImg.classList.remove('is-changing'); heroTitle.classList.remove('is-changing'); }, 620);
       };
-
       applyHero(heroSequence[heroIndex], true);
-
       setInterval(() => {
         heroIndex += 1;
-        if (heroIndex >= heroSequence.length) {
-          heroSequence = shuffle(heroImages);
-          heroIndex = 0;
-        }
+        if (heroIndex >= heroSequence.length) { heroSequence = shuffle(heroImages); heroIndex = 0; }
         applyHero(heroSequence[heroIndex]);
       }, 5200);
     </script>
