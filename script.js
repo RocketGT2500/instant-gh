@@ -13,6 +13,19 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+function addHeroSupportButton() {
+  const heroActions = document.querySelector(".hero-actions");
+  if (!heroActions || heroActions.querySelector('a[href="#soutenir"]')) return;
+
+  const supportButton = document.createElement("a");
+  supportButton.className = "button ghost";
+  supportButton.href = "#soutenir";
+  supportButton.textContent = "Me soutenir";
+  heroActions.appendChild(supportButton);
+}
+
+addHeroSupportButton();
+
 const observer = new IntersectionObserver(
   (entries) => {
     for (const entry of entries) {
