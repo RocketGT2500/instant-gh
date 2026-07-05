@@ -40,7 +40,7 @@
           </div>
         </div>
         <div class="hero-card reveal photo-card-main">
-          <img id="hero-carousel-image" src="moto-mecanique-14.jpg" alt="Photographie de terrain Instant.GH" class="photo-fill" />
+          <img id="hero-carousel-image" src="assets/photos/Moto &amp; mécanique/Moto_&amp;_mécanique_14.jpg" alt="Photographie de terrain Instant.GH" class="photo-fill" />
           <div class="photo-overlay"><strong id="hero-carousel-title">Puissance · Mouvement · Terrain</strong></div>
         </div>
       </section>
@@ -162,41 +162,399 @@
     <footer class="footer"><p>© <span id="year"></span> Instant.GH — Photographie de terrain</p><div class="footer-links"><a href="mentions.html">Mentions / informations</a><a href="https://www.instagram.com/instant.gh/" target="_blank" rel="noreferrer">Instagram</a><a href="https://gallienc.myportfolio.com/" target="_blank" rel="noreferrer">Portfolio</a><a href="https://paypal.me/instantGH?locale.x=fr_FR&country.x=FR" target="_blank" rel="noreferrer">Soutenir</a><a href="#accueil">Retour en haut</a></div></footer>
 
     <script>
-      const range = (max, excludes = []) => Array.from({length: max}, (_, i) => i + 1).filter(n => !excludes.includes(n));
-      const order = values => values.filter(Boolean);
       const categories = [
-        {id:'moto-mecanique', title:'Moto & mécanique', cover:'moto-mecanique-14.jpg', images:order([1,2,4,5,6,7,8,14,9,10,11,12,13,15,16,17,18,19,20,21,22,23,24,25,26,27,28]), text:'Détails mécaniques, voitures de caractère, puis motos en action et portraits de motards.', tags:['détails mécaniques','muscle cars','action circuit','portraits pilotes']},
-        {id:'sport-collectifs', title:'Sport & collectifs', cover:'sport-collectifs-08.jpg', images:order([8,1,2,3,4,5,6,7]), text:'Le sport comme sujet de tension collective : groupe, portraits, action, regard de match.', tags:['hockey','collectif','action glace','portraits joueurs']},
-        {id:'aviation', title:'Aviation', cover:'aviation-01.jpg', images:order([1,2,3,4,5,6,7,8,9]), text:'Meetings aériens, patrouilles, acrobaties et machines de légende.', tags:['meetings aériens','patrouilles','acrobaties','vintage WWII']},
-        {id:'evenementiel', title:'Événementiel', cover:'evenementiel-24.jpg', images:order([24,1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19,20,21,22,23]), text:'Concerts, festivals, scènes nocturnes et ambiances fortes.', tags:['concerts','festivals','événements nocturnes','reconstitution']},
-        {id:'defense-defiles', title:'Défense & défilés', cover:'defense-defiles-01.jpg', images:order([1,2,4,5,6,7,8]), text:'Action, poussière, blindés, défilés et scènes de terrain.', tags:['blindés','défilés','cavalerie']},
-        {id:'animalier', title:'Animalier', cover:'animalier-01.jpg', images:order([1,2,3,4,5,6,7,8,9,10,11]), text:'Regards, instinct, présence et détails naturels.', tags:['faune','oiseaux','macro','animaux de compagnie']},
-        {id:'portrait', title:'Portrait', cover:'portrait-11.jpg', images:order([11,1,2,3,4,5,6,7,8,9,10]), text:'Portraits dynamiques, en situation, liés à un univers.', tags:['sportifs','musiciens','artisans','motards']}
-      ];
+        {
+                "id": "moto-mecanique",
+                "title": "Moto & mécanique",
+                "cover": "assets/photos/Moto & mécanique/Moto_&_mécanique_14.jpg",
+                "images": [
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_01.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_02.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_03.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_04.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_05.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_06.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_07.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_08.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_09.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_10.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_11.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_12.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_13.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_14.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_15.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_16.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_17.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_18.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_19.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_20.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_21.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_22.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_23.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_24.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_25.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_26.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_27.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_28.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_29.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_30.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_31.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_32.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_33.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_34.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_35.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_36.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_37.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_38.jpg",
+                        "assets/photos/Moto & mécanique/Moto_&_mécanique_40.jpg"
+                ],
+                "text": "Motos en action, portraits de motards, détails mécaniques et machines de caractère.",
+                "tags": [
+                        "motos",
+                        "mécanique",
+                        "action",
+                        "portraits motards"
+                ]
+        },
+        {
+                "id": "sport-collectifs",
+                "title": "Sport & collectifs",
+                "cover": "assets/photos/Sport & collectifs/Sport_&_collectifs_08.jpg",
+                "images": [
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_01.jpg",
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_02.jpg",
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_03.jpg",
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_04.jpg",
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_05.jpg",
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_06.jpg",
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_07.jpg",
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_08.jpg",
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_09.jpg",
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_10.jpg",
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_11.jpg",
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_12.jpg",
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_13.jpg",
+                        "assets/photos/Sport & collectifs/Sport_&_collectifs_14.jpg"
+                ],
+                "text": "Le sport comme sujet de tension collective : groupe, portraits, action, regard de match.",
+                "tags": [
+                        "hockey",
+                        "collectif",
+                        "action glace",
+                        "portraits joueurs"
+                ]
+        },
+        {
+                "id": "aviation",
+                "title": "Aviation",
+                "cover": "assets/photos/Aviation/aviation-01.jpg",
+                "images": [
+                        "assets/photos/Aviation/aviation-01.jpg",
+                        "assets/photos/Aviation/aviation-02.jpg",
+                        "assets/photos/Aviation/aviation-3.jpg",
+                        "assets/photos/Aviation/aviation-04.jpg",
+                        "assets/photos/Aviation/aviation-05.jpg",
+                        "assets/photos/Aviation/aviation-06.jpg",
+                        "assets/photos/Aviation/aviation-07.jpg",
+                        "assets/photos/Aviation/aviation-08.jpg",
+                        "assets/photos/Aviation/aviation-09.jpg",
+                        "assets/photos/Aviation/aviation-10.jpg"
+                ],
+                "text": "Meetings aériens, patrouilles, acrobaties et machines de légende.",
+                "tags": [
+                        "meetings aériens",
+                        "patrouilles",
+                        "acrobaties",
+                        "machines"
+                ]
+        },
+        {
+                "id": "evenementiel",
+                "title": "Événementiel",
+                "cover": "assets/photos/Événementiel/evenementiel-24.jpg",
+                "images": [
+                        "assets/photos/Événementiel/evenementiel-01.jpg",
+                        "assets/photos/Événementiel/evenementiel-02.jpg",
+                        "assets/photos/Événementiel/evenementiel-03.jpg",
+                        "assets/photos/Événementiel/evenementiel-04.jpg",
+                        "assets/photos/Événementiel/evenementiel-05.jpg",
+                        "assets/photos/Événementiel/evenementiel-06.jpg",
+                        "assets/photos/Événementiel/evenementiel-07.jpg",
+                        "assets/photos/Événementiel/evenementiel-08.jpg",
+                        "assets/photos/Événementiel/evenementiel-09.jpg",
+                        "assets/photos/Événementiel/evenementiel-10.jpg",
+                        "assets/photos/Événementiel/evenementiel-11.jpg",
+                        "assets/photos/Événementiel/evenementiel-12.jpg",
+                        "assets/photos/Événementiel/evenementiel-13.jpg",
+                        "assets/photos/Événementiel/evenementiel-14.jpg",
+                        "assets/photos/Événementiel/evenementiel-15.jpg",
+                        "assets/photos/Événementiel/evenementiel-16.jpg",
+                        "assets/photos/Événementiel/evenementiel-17.jpg",
+                        "assets/photos/Événementiel/evenementiel-18.jpg",
+                        "assets/photos/Événementiel/evenementiel-19.jpg",
+                        "assets/photos/Événementiel/evenementiel-20.jpg",
+                        "assets/photos/Événementiel/evenementiel-21.jpg",
+                        "assets/photos/Événementiel/evenementiel-22.jpg",
+                        "assets/photos/Événementiel/evenementiel-23.jpg",
+                        "assets/photos/Événementiel/evenementiel-24.jpg",
+                        "assets/photos/Événementiel/evenementiel-25.jpg",
+                        "assets/photos/Événementiel/evenementiel-26.jpg",
+                        "assets/photos/Événementiel/evenementiel-27.jpg"
+                ],
+                "text": "Concerts, festivals, scènes nocturnes, reconstitution et ambiances fortes.",
+                "tags": [
+                        "concerts",
+                        "festivals",
+                        "événements nocturnes",
+                        "reconstitution"
+                ]
+        },
+        {
+                "id": "defense-defiles",
+                "title": "Défense & défilés",
+                "cover": "assets/photos/Défense & défilés/defense-defiles-01.jpg",
+                "images": [
+                        "assets/photos/Défense & défilés/defense-defiles-01.jpg",
+                        "assets/photos/Défense & défilés/defense-defiles-02.jpg",
+                        "assets/photos/Défense & défilés/defense-defiles-03.jpg",
+                        "assets/photos/Défense & défilés/defense-defiles-04.jpg",
+                        "assets/photos/Défense & défilés/defense-defiles-05.jpg",
+                        "assets/photos/Défense & défilés/defense-defiles-06.jpg",
+                        "assets/photos/Défense & défilés/defense-defiles-07.jpg",
+                        "assets/photos/Défense & défilés/defense-defiles-08.jpg",
+                        "assets/photos/Défense & défilés/defense-defiles-09.jpg"
+                ],
+                "text": "Action, poussière, blindés, défilés et scènes de terrain.",
+                "tags": [
+                        "blindés",
+                        "défilés",
+                        "cavalerie",
+                        "terrain"
+                ]
+        },
+        {
+                "id": "animalier",
+                "title": "Animalier",
+                "cover": "assets/photos/Animalier/Animalier-01.jpg",
+                "images": [
+                        "assets/photos/Animalier/Animalier-01.jpg",
+                        "assets/photos/Animalier/Animalier-02.jpg",
+                        "assets/photos/Animalier/Animalier-03.jpg",
+                        "assets/photos/Animalier/Animalier-04.jpg",
+                        "assets/photos/Animalier/Animalier-05.jpg",
+                        "assets/photos/Animalier/Animalier-06.jpg",
+                        "assets/photos/Animalier/Animalier-07.jpg",
+                        "assets/photos/Animalier/Animalier-08.jpg",
+                        "assets/photos/Animalier/Animalier-09.jpg",
+                        "assets/photos/Animalier/Animalier-10.jpg",
+                        "assets/photos/Animalier/Animalier-11.jpg",
+                        "assets/photos/Animalier/Animalier-12.jpg",
+                        "assets/photos/Animalier/Animalier-13.jpg",
+                        "assets/photos/Animalier/Animalier-14.jpg",
+                        "assets/photos/Animalier/Animalier-15.jpg",
+                        "assets/photos/Animalier/Animalier-16.jpg",
+                        "assets/photos/Animalier/Animalier-17.jpg",
+                        "assets/photos/Animalier/Animalier-18.jpg",
+                        "assets/photos/Animalier/Animalier-19.jpg",
+                        "assets/photos/Animalier/Animalier-20.jpg",
+                        "assets/photos/Animalier/Animalier-21.jpg",
+                        "assets/photos/Animalier/Animalier-22.jpg",
+                        "assets/photos/Animalier/Animalier-23.jpg",
+                        "assets/photos/Animalier/Animalier-24.jpg"
+                ],
+                "text": "Regards, instinct, présence et détails naturels.",
+                "tags": [
+                        "faune",
+                        "oiseaux",
+                        "macro",
+                        "animaux de compagnie"
+                ]
+        },
+        {
+                "id": "portrait",
+                "title": "Portrait",
+                "cover": "assets/photos/Portrait/Portrait_11.jpg",
+                "images": [
+                        "assets/photos/Portrait/Portrait_01.jpg",
+                        "assets/photos/Portrait/Portrait_02.jpg",
+                        "assets/photos/Portrait/Portrait_03.jpg",
+                        "assets/photos/Portrait/Portrait_04.jpg",
+                        "assets/photos/Portrait/Portrait_05.jpg",
+                        "assets/photos/Portrait/Portrait_06.jpg",
+                        "assets/photos/Portrait/Portrait_07.jpg",
+                        "assets/photos/Portrait/Portrait_08.jpg",
+                        "assets/photos/Portrait/Portrait_09.jpg",
+                        "assets/photos/Portrait/Portrait_10.jpg",
+                        "assets/photos/Portrait/Portrait_11.jpg",
+                        "assets/photos/Portrait/Portrait_12.jpg",
+                        "assets/photos/Portrait/Portrait_13.jpg",
+                        "assets/photos/Portrait/Portrait_14.jpg",
+                        "assets/photos/Portrait/Portrait_15.jpg",
+                        "assets/photos/Portrait/Portrait_16.jpg"
+                ],
+                "text": "Portraits dynamiques, en situation, liés à un univers.",
+                "tags": [
+                        "sportifs",
+                        "musiciens",
+                        "artisans",
+                        "motards"
+                ]
+        }
+];
 
       const altTexts = {
-        'moto-mecanique':'Moto et mécanique, mouvement et détails, photographie Instant.GH en Pays de la Loire',
-        'sport-collectifs':'Sport collectif et hockey, action et ambiance de groupe, photographie Instant.GH',
-        'aviation':'Aviation et meeting aérien, appareil en vol, photographie Instant.GH',
-        'evenementiel':'Événement local, scène ou ambiance nocturne, photographie Instant.GH',
-        'defense-defiles':'Défense, défilé ou blindé en action, photographie Instant.GH',
-        'animalier':'Portrait animalier, regard et présence naturelle, photographie Instant.GH',
-        'portrait':'Portrait en situation, lumière et présence, photographie Instant.GH'
-      };
+        "moto-mecanique": "Moto et mécanique, mouvement et détails, photographie Instant.GH en Pays de la Loire",
+        "sport-collectifs": "Sport collectif et hockey, action et ambiance de groupe, photographie Instant.GH",
+        "aviation": "Aviation et meeting aérien, appareil en vol, photographie Instant.GH",
+        "evenementiel": "Événement local, scène ou ambiance nocturne, photographie Instant.GH",
+        "defense-defiles": "Défense, défilé ou blindé en action, photographie Instant.GH",
+        "animalier": "Portrait animalier, regard et présence naturelle, photographie Instant.GH",
+        "portrait": "Portrait en situation, lumière et présence, photographie Instant.GH"
+};
 
-      const pad = n => String(n).padStart(2, '0');
-      const imagePath = (cat, n) => `${cat.id}-${pad(n)}.jpg`;
+      const heroImages = [
+        [
+                "assets/photos/Moto & mécanique/Moto_&_mécanique_14.jpg",
+                "Puissance · Mouvement · Terrain"
+        ],
+        [
+                "assets/photos/Moto & mécanique/Moto_&_mécanique_01.jpg",
+                "Vitesse · Route · Instinct"
+        ],
+        [
+                "assets/photos/Moto & mécanique/Moto_&_mécanique_02.jpg",
+                "Machine · Détail · Présence"
+        ],
+        [
+                "assets/photos/Moto & mécanique/Moto_&_mécanique_04.jpg",
+                "Mécanique · Ligne · Caractère"
+        ],
+        [
+                "assets/photos/Moto & mécanique/Moto_&_mécanique_08.jpg",
+                "Pilote · Mouvement · Lumière"
+        ],
+        [
+                "assets/photos/Moto & mécanique/Moto_&_mécanique_15.jpg",
+                "Route · Puissance · Instant"
+        ],
+        [
+                "assets/photos/Aviation/aviation-01.jpg",
+                "Précision · Ciel · Vitesse"
+        ],
+        [
+                "assets/photos/Aviation/aviation-02.jpg",
+                "Altitude · Formation · Maîtrise"
+        ],
+        [
+                "assets/photos/Aviation/aviation-3.jpg",
+                "Ciel · Trajectoire · Puissance"
+        ],
+        [
+                "assets/photos/Aviation/aviation-08.jpg",
+                "Patrouille · Fumée · Précision"
+        ],
+        [
+                "assets/photos/Animalier/Animalier-01.jpg",
+                "Regard · Instinct · Présence"
+        ],
+        [
+                "assets/photos/Animalier/Animalier-02.jpg",
+                "Nature · Détail · Silence"
+        ],
+        [
+                "assets/photos/Animalier/Animalier-05.jpg",
+                "Faune · Lumière · Instant"
+        ],
+        [
+                "assets/photos/Animalier/Animalier-10.jpg",
+                "Présence · Regard · Nature"
+        ],
+        [
+                "assets/photos/Défense & défilés/defense-defiles-01.jpg",
+                "Action · Poussière · Terrain"
+        ],
+        [
+                "assets/photos/Défense & défilés/defense-defiles-04.jpg",
+                "Blindé · Force · Mouvement"
+        ],
+        [
+                "assets/photos/Défense & défilés/defense-defiles-08.jpg",
+                "Défilé · Ligne · Présence"
+        ],
+        [
+                "assets/photos/Sport & collectifs/Sport_&_collectifs_08.jpg",
+                "Collectif · Tension · Geste"
+        ],
+        [
+                "assets/photos/Sport & collectifs/Sport_&_collectifs_01.jpg",
+                "Équipe · Glace · Intensité"
+        ],
+        [
+                "assets/photos/Sport & collectifs/Sport_&_collectifs_05.jpg",
+                "Sport · Mouvement · Effort"
+        ],
+        [
+                "assets/photos/Événementiel/evenementiel-24.jpg",
+                "Lumière · Scène · Émotion"
+        ],
+        [
+                "assets/photos/Événementiel/evenementiel-01.jpg",
+                "Scène · Nuit · Ambiance"
+        ],
+        [
+                "assets/photos/Événementiel/evenementiel-04.jpg",
+                "Concert · Énergie · Lumière"
+        ],
+        [
+                "assets/photos/Événementiel/evenementiel-12.jpg",
+                "Événement · Moment · Mémoire"
+        ],
+        [
+                "assets/photos/Événementiel/evenementiel-21.jpg",
+                "Ambiance · Nuit · Présence"
+        ],
+        [
+                "assets/photos/Portrait/Portrait_11.jpg",
+                "Portrait · Présence · Instant"
+        ],
+        [
+                "assets/photos/Portrait/Portrait_01.jpg",
+                "Regard · Lumière · Humain"
+        ],
+        [
+                "assets/photos/Portrait/Portrait_07.jpg",
+                "Portrait · Geste · Caractère"
+        ],
+        [
+                "assets/photos/Portrait/Portrait_10.jpg",
+                "Visage · Silence · Instant"
+        ]
+];
+
+      const escapeHtml = value => String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
       const categoryList = document.getElementById('category-list');
 
       categories.forEach(cat => {
         const article = document.createElement('article');
         article.className = 'category-block reveal';
         article.id = cat.id;
-        const tags = cat.tags.map(t => `<span>${t}</span>`).join('');
-        const imgs = cat.images.map(n => `<img loading="eager" src="${imagePath(cat, n)}" alt="${altTexts[cat.id]} ${pad(n)}" onerror="this.remove()" />`).join('');
+
+        const tags = cat.tags.map(t => `<span>${escapeHtml(t)}</span>`).join('');
+        const imgs = cat.images.map((src, index) => {
+          const imageNumber = String(index + 1).padStart(2, '0');
+          const alt = `${altTexts[cat.id]} ${imageNumber}`;
+          return `<img loading="eager" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" onerror="this.remove()" />`;
+        }).join('');
+
         article.innerHTML = `
           <div class="category-head">
-            <div><h3>${cat.title}</h3><p>${cat.text}</p></div>
+            <div><h3>${escapeHtml(cat.title)}</h3><p>${escapeHtml(cat.text)}</p></div>
             <div class="gallery-actions">
               <button class="scroll-gallery-button" type="button">Faire défiler →</button>
               <button class="toggle-gallery-button" type="button">Tout afficher</button>
@@ -226,38 +584,6 @@
         });
       });
 
-      const heroImages = [
-        ['moto-mecanique-14.jpg', 'Puissance · Mouvement · Terrain'],
-        ['moto-mecanique-01.jpg', 'Vitesse · Route · Instinct'],
-        ['moto-mecanique-02.jpg', 'Machine · Détail · Présence'],
-        ['moto-mecanique-04.jpg', 'Mécanique · Ligne · Caractère'],
-        ['moto-mecanique-08.jpg', 'Pilote · Mouvement · Lumière'],
-        ['moto-mecanique-15.jpg', 'Route · Puissance · Instant'],
-        ['aviation-01.jpg', 'Précision · Ciel · Vitesse'],
-        ['aviation-02.jpg', 'Altitude · Formation · Maîtrise'],
-        ['aviation-04.jpg', 'Ciel · Trajectoire · Puissance'],
-        ['aviation-08.jpg', 'Patrouille · Fumée · Précision'],
-        ['animalier-01.jpg', 'Regard · Instinct · Présence'],
-        ['animalier-02.jpg', 'Nature · Détail · Silence'],
-        ['animalier-05.jpg', 'Faune · Lumière · Instant'],
-        ['animalier-10.jpg', 'Présence · Regard · Nature'],
-        ['defense-defiles-01.jpg', 'Action · Poussière · Terrain'],
-        ['defense-defiles-04.jpg', 'Blindé · Force · Mouvement'],
-        ['defense-defiles-08.jpg', 'Défilé · Ligne · Présence'],
-        ['sport-collectifs-08.jpg', 'Collectif · Tension · Geste'],
-        ['sport-collectifs-01.jpg', 'Équipe · Glace · Intensité'],
-        ['sport-collectifs-05.jpg', 'Sport · Mouvement · Effort'],
-        ['evenementiel-24.jpg', 'Lumière · Scène · Émotion'],
-        ['evenementiel-01.jpg', 'Scène · Nuit · Ambiance'],
-        ['evenementiel-04.jpg', 'Concert · Énergie · Lumière'],
-        ['evenementiel-12.jpg', 'Événement · Moment · Mémoire'],
-        ['evenementiel-21.jpg', 'Ambiance · Nuit · Présence'],
-        ['portrait-11.jpg', 'Portrait · Présence · Instant'],
-        ['portrait-01.jpg', 'Regard · Lumière · Humain'],
-        ['portrait-07.jpg', 'Portrait · Geste · Caractère'],
-        ['portrait-10.jpg', 'Visage · Silence · Instant']
-      ];
-
       const shuffle = array => {
         const copy = [...array];
         for (let i = copy.length - 1; i > 0; i--) {
@@ -272,24 +598,57 @@
       const heroImg = document.getElementById('hero-carousel-image');
       const heroTitle = document.getElementById('hero-carousel-title');
 
-      const preloadHero = src => { const image = new Image(); image.src = src; };
+      const preloadHero = src => {
+        const image = new Image();
+        image.src = src;
+      };
+
       const applyHero = ([src, title], immediate = false) => {
-        if (immediate) { heroImg.src = src; heroTitle.textContent = title; preloadHero(heroSequence[(heroIndex + 1) % heroSequence.length][0]); return; }
-        heroImg.classList.add('is-changing'); heroTitle.classList.add('is-changing');
-        setTimeout(() => { heroImg.src = src; heroTitle.textContent = title; preloadHero(heroSequence[(heroIndex + 1) % heroSequence.length][0]); }, 420);
-        setTimeout(() => { heroImg.classList.remove('is-changing'); heroTitle.classList.remove('is-changing'); }, 620);
+        if (!heroImg || !heroTitle) return;
+
+        if (immediate) {
+          heroImg.src = src;
+          heroTitle.textContent = title;
+          preloadHero(heroSequence[(heroIndex + 1) % heroSequence.length][0]);
+          return;
+        }
+
+        heroImg.classList.add('is-changing');
+        heroTitle.classList.add('is-changing');
+
+        setTimeout(() => {
+          heroImg.src = src;
+          heroTitle.textContent = title;
+          preloadHero(heroSequence[(heroIndex + 1) % heroSequence.length][0]);
+        }, 420);
+
+        setTimeout(() => {
+          heroImg.classList.remove('is-changing');
+          heroTitle.classList.remove('is-changing');
+        }, 620);
       };
-      heroImg.onerror = () => {
-        heroIndex += 1;
-        if (heroIndex >= heroSequence.length) { heroSequence = shuffle(heroImages); heroIndex = 0; }
+
+      if (heroImg && heroTitle) {
+        heroImg.onerror = () => {
+          heroIndex += 1;
+          if (heroIndex >= heroSequence.length) {
+            heroSequence = shuffle(heroImages);
+            heroIndex = 0;
+          }
+          applyHero(heroSequence[heroIndex], true);
+        };
+
         applyHero(heroSequence[heroIndex], true);
-      };
-      applyHero(heroSequence[heroIndex], true);
-      setInterval(() => {
-        heroIndex += 1;
-        if (heroIndex >= heroSequence.length) { heroSequence = shuffle(heroImages); heroIndex = 0; }
-        applyHero(heroSequence[heroIndex]);
-      }, 5200);
+
+        setInterval(() => {
+          heroIndex += 1;
+          if (heroIndex >= heroSequence.length) {
+            heroSequence = shuffle(heroImages);
+            heroIndex = 0;
+          }
+          applyHero(heroSequence[heroIndex]);
+        }, 5200);
+      }
     </script>
     <script src="script.js"></script>
   </body>
