@@ -1,0 +1,2226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie photos - photos</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f3f3f3;
+            color: #222;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #1f1f1f;
+            color: white;
+            padding: 16px 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+
+        header h1 {
+            margin: 0 0 8px 0;
+            font-size: 22px;
+        }
+
+        header .count {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        #search {
+            margin-top: 12px;
+            width: 100%;
+            max-width: 600px;
+            padding: 10px 12px;
+            border-radius: 6px;
+            border: none;
+            font-size: 15px;
+        }
+
+        main {
+            padding: 24px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+            height: 240px;
+            object-fit: contain;
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .meta {
+            padding: 12px;
+            flex: 1;
+        }
+
+        .filename {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 8px;
+            word-break: break-word;
+        }
+
+        .path {
+            font-size: 12px;
+            color: #555;
+            word-break: break-all;
+            line-height: 1.35;
+        }
+
+        button {
+            margin: 0 12px 12px 12px;
+            padding: 8px 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #333;
+            color: white;
+            font-size: 13px;
+        }
+
+        button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Galerie photos - photos</h1>
+        <div class="count">139 image(s)</div>
+        <input id="search" type="text" placeholder="Rechercher par nom de fichier ou chemin...">
+    </header>
+
+    <main>
+        <section class="grid">
+            
+        <article class="card" data-search="animalier-01.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-01.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-01.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00001_Animalier-01.jpg" loading="lazy" alt="Animalier-01.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-01.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-01.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-01.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-02.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-02.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-02.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00002_Animalier-02.jpg" loading="lazy" alt="Animalier-02.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-02.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-02.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-02.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-03.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-03.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-03.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00003_Animalier-03.jpg" loading="lazy" alt="Animalier-03.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-03.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-03.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-03.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-04.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-04.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-04.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00004_Animalier-04.jpg" loading="lazy" alt="Animalier-04.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-04.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-04.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-04.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-05.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-05.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-05.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00005_Animalier-05.jpg" loading="lazy" alt="Animalier-05.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-05.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-05.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-05.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-06.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-06.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-06.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00006_Animalier-06.jpg" loading="lazy" alt="Animalier-06.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-06.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-06.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-06.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-07.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-07.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-07.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00007_Animalier-07.jpg" loading="lazy" alt="Animalier-07.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-07.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-07.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-07.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-08.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-08.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-08.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00008_Animalier-08.jpg" loading="lazy" alt="Animalier-08.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-08.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-08.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-08.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-09.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-09.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-09.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00009_Animalier-09.jpg" loading="lazy" alt="Animalier-09.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-09.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-09.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-09.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-10.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-10.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-10.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00010_Animalier-10.jpg" loading="lazy" alt="Animalier-10.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-10.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-10.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-10.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-11.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-11.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-11.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00011_Animalier-11.jpg" loading="lazy" alt="Animalier-11.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-11.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-11.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-11.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-12.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-12.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-12.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00012_Animalier-12.jpg" loading="lazy" alt="Animalier-12.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-12.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-12.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-12.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-13.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-13.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-13.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00013_Animalier-13.jpg" loading="lazy" alt="Animalier-13.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-13.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-13.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-13.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-14.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-14.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-14.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00014_Animalier-14.jpg" loading="lazy" alt="Animalier-14.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-14.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-14.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-14.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-15.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-15.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-15.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00015_Animalier-15.jpg" loading="lazy" alt="Animalier-15.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-15.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-15.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-15.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-16.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-16.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-16.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00016_Animalier-16.jpg" loading="lazy" alt="Animalier-16.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-16.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-16.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-16.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-17.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-17.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-17.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00017_Animalier-17.jpg" loading="lazy" alt="Animalier-17.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-17.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-17.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-17.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-18.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-18.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-18.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00018_Animalier-18.jpg" loading="lazy" alt="Animalier-18.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-18.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-18.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-18.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-19.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-19.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-19.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00019_Animalier-19.jpg" loading="lazy" alt="Animalier-19.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-19.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-19.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-19.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-20.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-20.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-20.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00020_Animalier-20.jpg" loading="lazy" alt="Animalier-20.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-20.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-20.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-20.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-21.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-21.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-21.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00021_Animalier-21.jpg" loading="lazy" alt="Animalier-21.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-21.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-21.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-21.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-22.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-22.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-22.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00022_Animalier-22.jpg" loading="lazy" alt="Animalier-22.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-22.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-22.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-22.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-23.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-23.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-23.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00023_Animalier-23.jpg" loading="lazy" alt="Animalier-23.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-23.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-23.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-23.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="animalier-24.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\animalier\animalier-24.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Animalier/Animalier-24.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00024_Animalier-24.jpg" loading="lazy" alt="Animalier-24.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Animalier-24.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-24.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Animalier\Animalier-24.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="aviation-01.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\aviation\aviation-01.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Aviation/aviation-01.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00025_aviation-01.jpg" loading="lazy" alt="aviation-01.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">aviation-01.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-01.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-01.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="aviation-02.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\aviation\aviation-02.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Aviation/aviation-02.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00026_aviation-02.jpg" loading="lazy" alt="aviation-02.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">aviation-02.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-02.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-02.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="aviation-04.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\aviation\aviation-04.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Aviation/aviation-04.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00027_aviation-04.jpg" loading="lazy" alt="aviation-04.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">aviation-04.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-04.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-04.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="aviation-05.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\aviation\aviation-05.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Aviation/aviation-05.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00028_aviation-05.jpg" loading="lazy" alt="aviation-05.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">aviation-05.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-05.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-05.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="aviation-06.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\aviation\aviation-06.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Aviation/aviation-06.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00029_aviation-06.jpg" loading="lazy" alt="aviation-06.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">aviation-06.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-06.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-06.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="aviation-07.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\aviation\aviation-07.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Aviation/aviation-07.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00030_aviation-07.jpg" loading="lazy" alt="aviation-07.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">aviation-07.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-07.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-07.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="aviation-08.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\aviation\aviation-08.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Aviation/aviation-08.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00031_aviation-08.jpg" loading="lazy" alt="aviation-08.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">aviation-08.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-08.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-08.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="aviation-09.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\aviation\aviation-09.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Aviation/aviation-09.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00032_aviation-09.jpg" loading="lazy" alt="aviation-09.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">aviation-09.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-09.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-09.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="aviation-10.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\aviation\aviation-10.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Aviation/aviation-10.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00033_aviation-10.jpg" loading="lazy" alt="aviation-10.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">aviation-10.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-10.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-10.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="aviation-3.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\aviation\aviation-3.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Aviation/aviation-3.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00034_aviation-3.jpg" loading="lazy" alt="aviation-3.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">aviation-3.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-3.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Aviation\aviation-3.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="defense-defiles-01.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\défense &amp; défilés\defense-defiles-01.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/D%C3%A9fense%20%26%20d%C3%A9fil%C3%A9s/defense-defiles-01.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00035_defense-defiles-01.jpg" loading="lazy" alt="defense-defiles-01.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">defense-defiles-01.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-01.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-01.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="defense-defiles-02.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\défense &amp; défilés\defense-defiles-02.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/D%C3%A9fense%20%26%20d%C3%A9fil%C3%A9s/defense-defiles-02.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00036_defense-defiles-02.jpg" loading="lazy" alt="defense-defiles-02.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">defense-defiles-02.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-02.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-02.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="defense-defiles-03.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\défense &amp; défilés\defense-defiles-03.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/D%C3%A9fense%20%26%20d%C3%A9fil%C3%A9s/defense-defiles-03.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00037_defense-defiles-03.jpg" loading="lazy" alt="defense-defiles-03.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">defense-defiles-03.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-03.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-03.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="defense-defiles-04.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\défense &amp; défilés\defense-defiles-04.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/D%C3%A9fense%20%26%20d%C3%A9fil%C3%A9s/defense-defiles-04.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00038_defense-defiles-04.jpg" loading="lazy" alt="defense-defiles-04.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">defense-defiles-04.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-04.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-04.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="defense-defiles-05.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\défense &amp; défilés\defense-defiles-05.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/D%C3%A9fense%20%26%20d%C3%A9fil%C3%A9s/defense-defiles-05.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00039_defense-defiles-05.jpg" loading="lazy" alt="defense-defiles-05.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">defense-defiles-05.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-05.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-05.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="defense-defiles-06.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\défense &amp; défilés\defense-defiles-06.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/D%C3%A9fense%20%26%20d%C3%A9fil%C3%A9s/defense-defiles-06.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00040_defense-defiles-06.jpg" loading="lazy" alt="defense-defiles-06.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">defense-defiles-06.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-06.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-06.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="defense-defiles-07.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\défense &amp; défilés\defense-defiles-07.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/D%C3%A9fense%20%26%20d%C3%A9fil%C3%A9s/defense-defiles-07.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00041_defense-defiles-07.jpg" loading="lazy" alt="defense-defiles-07.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">defense-defiles-07.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-07.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-07.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="defense-defiles-08.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\défense &amp; défilés\defense-defiles-08.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/D%C3%A9fense%20%26%20d%C3%A9fil%C3%A9s/defense-defiles-08.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00042_defense-defiles-08.jpg" loading="lazy" alt="defense-defiles-08.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">defense-defiles-08.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-08.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-08.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="defense-defiles-09.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\défense &amp; défilés\defense-defiles-09.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/D%C3%A9fense%20%26%20d%C3%A9fil%C3%A9s/defense-defiles-09.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00043_defense-defiles-09.jpg" loading="lazy" alt="defense-defiles-09.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">defense-defiles-09.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-09.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Défense &amp; défilés\defense-defiles-09.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_01.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_01.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_01.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00044_Moto_&amp;_mécanique_01.jpg" loading="lazy" alt="Moto_&amp;_mécanique_01.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_01.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_01.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_01.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_02.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_02.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_02.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00045_Moto_&amp;_mécanique_02.jpg" loading="lazy" alt="Moto_&amp;_mécanique_02.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_02.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_02.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_02.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_03.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_03.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_03.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00046_Moto_&amp;_mécanique_03.jpg" loading="lazy" alt="Moto_&amp;_mécanique_03.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_03.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_03.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_03.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_04.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_04.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_04.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00047_Moto_&amp;_mécanique_04.jpg" loading="lazy" alt="Moto_&amp;_mécanique_04.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_04.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_04.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_04.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_05.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_05.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_05.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00048_Moto_&amp;_mécanique_05.jpg" loading="lazy" alt="Moto_&amp;_mécanique_05.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_05.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_05.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_05.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_06.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_06.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_06.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00049_Moto_&amp;_mécanique_06.jpg" loading="lazy" alt="Moto_&amp;_mécanique_06.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_06.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_06.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_06.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_07.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_07.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_07.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00050_Moto_&amp;_mécanique_07.jpg" loading="lazy" alt="Moto_&amp;_mécanique_07.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_07.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_07.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_07.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_08.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_08.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_08.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00051_Moto_&amp;_mécanique_08.jpg" loading="lazy" alt="Moto_&amp;_mécanique_08.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_08.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_08.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_08.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_09.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_09.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_09.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00052_Moto_&amp;_mécanique_09.jpg" loading="lazy" alt="Moto_&amp;_mécanique_09.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_09.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_09.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_09.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_10.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_10.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_10.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00053_Moto_&amp;_mécanique_10.jpg" loading="lazy" alt="Moto_&amp;_mécanique_10.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_10.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_10.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_10.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_11.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_11.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_11.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00054_Moto_&amp;_mécanique_11.jpg" loading="lazy" alt="Moto_&amp;_mécanique_11.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_11.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_11.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_11.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_12.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_12.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_12.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00055_Moto_&amp;_mécanique_12.jpg" loading="lazy" alt="Moto_&amp;_mécanique_12.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_12.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_12.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_12.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_13.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_13.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_13.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00056_Moto_&amp;_mécanique_13.jpg" loading="lazy" alt="Moto_&amp;_mécanique_13.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_13.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_13.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_13.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_14.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_14.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_14.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00057_Moto_&amp;_mécanique_14.jpg" loading="lazy" alt="Moto_&amp;_mécanique_14.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_14.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_14.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_14.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_15.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_15.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_15.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00058_Moto_&amp;_mécanique_15.jpg" loading="lazy" alt="Moto_&amp;_mécanique_15.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_15.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_15.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_15.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_16.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_16.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_16.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00059_Moto_&amp;_mécanique_16.jpg" loading="lazy" alt="Moto_&amp;_mécanique_16.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_16.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_16.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_16.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_17.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_17.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_17.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00060_Moto_&amp;_mécanique_17.jpg" loading="lazy" alt="Moto_&amp;_mécanique_17.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_17.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_17.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_17.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_18.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_18.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_18.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00061_Moto_&amp;_mécanique_18.jpg" loading="lazy" alt="Moto_&amp;_mécanique_18.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_18.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_18.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_18.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_19.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_19.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_19.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00062_Moto_&amp;_mécanique_19.jpg" loading="lazy" alt="Moto_&amp;_mécanique_19.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_19.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_19.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_19.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_20.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_20.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_20.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00063_Moto_&amp;_mécanique_20.jpg" loading="lazy" alt="Moto_&amp;_mécanique_20.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_20.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_20.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_20.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_21.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_21.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_21.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00064_Moto_&amp;_mécanique_21.jpg" loading="lazy" alt="Moto_&amp;_mécanique_21.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_21.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_21.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_21.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_22.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_22.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_22.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00065_Moto_&amp;_mécanique_22.jpg" loading="lazy" alt="Moto_&amp;_mécanique_22.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_22.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_22.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_22.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_23.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_23.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_23.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00066_Moto_&amp;_mécanique_23.jpg" loading="lazy" alt="Moto_&amp;_mécanique_23.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_23.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_23.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_23.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_24.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_24.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_24.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00067_Moto_&amp;_mécanique_24.jpg" loading="lazy" alt="Moto_&amp;_mécanique_24.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_24.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_24.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_24.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_25.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_25.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_25.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00068_Moto_&amp;_mécanique_25.jpg" loading="lazy" alt="Moto_&amp;_mécanique_25.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_25.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_25.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_25.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_26.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_26.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_26.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00069_Moto_&amp;_mécanique_26.jpg" loading="lazy" alt="Moto_&amp;_mécanique_26.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_26.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_26.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_26.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_27.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_27.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_27.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00070_Moto_&amp;_mécanique_27.jpg" loading="lazy" alt="Moto_&amp;_mécanique_27.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_27.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_27.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_27.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_28.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_28.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_28.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00071_Moto_&amp;_mécanique_28.jpg" loading="lazy" alt="Moto_&amp;_mécanique_28.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_28.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_28.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_28.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_29.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_29.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_29.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00072_Moto_&amp;_mécanique_29.jpg" loading="lazy" alt="Moto_&amp;_mécanique_29.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_29.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_29.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_29.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_30.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_30.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_30.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00073_Moto_&amp;_mécanique_30.jpg" loading="lazy" alt="Moto_&amp;_mécanique_30.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_30.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_30.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_30.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_31.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_31.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_31.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00074_Moto_&amp;_mécanique_31.jpg" loading="lazy" alt="Moto_&amp;_mécanique_31.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_31.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_31.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_31.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_32.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_32.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_32.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00075_Moto_&amp;_mécanique_32.jpg" loading="lazy" alt="Moto_&amp;_mécanique_32.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_32.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_32.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_32.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_33.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_33.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_33.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00076_Moto_&amp;_mécanique_33.jpg" loading="lazy" alt="Moto_&amp;_mécanique_33.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_33.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_33.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_33.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_34.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_34.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_34.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00077_Moto_&amp;_mécanique_34.jpg" loading="lazy" alt="Moto_&amp;_mécanique_34.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_34.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_34.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_34.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_35.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_35.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_35.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00078_Moto_&amp;_mécanique_35.jpg" loading="lazy" alt="Moto_&amp;_mécanique_35.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_35.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_35.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_35.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_36.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_36.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_36.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00079_Moto_&amp;_mécanique_36.jpg" loading="lazy" alt="Moto_&amp;_mécanique_36.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_36.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_36.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_36.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_37.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_37.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_37.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00080_Moto_&amp;_mécanique_37.jpg" loading="lazy" alt="Moto_&amp;_mécanique_37.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_37.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_37.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_37.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_38.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_38.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_38.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00081_Moto_&amp;_mécanique_38.jpg" loading="lazy" alt="Moto_&amp;_mécanique_38.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_38.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_38.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_38.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="moto_&amp;_mécanique_40.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\moto &amp; mécanique\moto_&amp;_mécanique_40.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Moto%20%26%20m%C3%A9canique/Moto_%26_m%C3%A9canique_40.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00082_Moto_&amp;_mécanique_40.jpg" loading="lazy" alt="Moto_&amp;_mécanique_40.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Moto_&amp;_mécanique_40.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_40.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Moto &amp; mécanique\Moto_&amp;_mécanique_40.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_01.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_01.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_01.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00083_Portrait_01.jpg" loading="lazy" alt="Portrait_01.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_01.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_01.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_01.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_02.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_02.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_02.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00084_Portrait_02.jpg" loading="lazy" alt="Portrait_02.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_02.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_02.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_02.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_03.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_03.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_03.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00085_Portrait_03.jpg" loading="lazy" alt="Portrait_03.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_03.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_03.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_03.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_04.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_04.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_04.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00086_Portrait_04.jpg" loading="lazy" alt="Portrait_04.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_04.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_04.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_04.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_05.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_05.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_05.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00087_Portrait_05.jpg" loading="lazy" alt="Portrait_05.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_05.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_05.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_05.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_06.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_06.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_06.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00088_Portrait_06.jpg" loading="lazy" alt="Portrait_06.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_06.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_06.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_06.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_07.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_07.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_07.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00089_Portrait_07.jpg" loading="lazy" alt="Portrait_07.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_07.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_07.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_07.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_08.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_08.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_08.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00090_Portrait_08.jpg" loading="lazy" alt="Portrait_08.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_08.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_08.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_08.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_09.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_09.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_09.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00091_Portrait_09.jpg" loading="lazy" alt="Portrait_09.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_09.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_09.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_09.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_10.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_10.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_10.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00092_Portrait_10.jpg" loading="lazy" alt="Portrait_10.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_10.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_10.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_10.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_11.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_11.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_11.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00093_Portrait_11.jpg" loading="lazy" alt="Portrait_11.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_11.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_11.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_11.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_12.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_12.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_12.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00094_Portrait_12.jpg" loading="lazy" alt="Portrait_12.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_12.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_12.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_12.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_13.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_13.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_13.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00095_Portrait_13.jpg" loading="lazy" alt="Portrait_13.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_13.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_13.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_13.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_14.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_14.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_14.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00096_Portrait_14.jpg" loading="lazy" alt="Portrait_14.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_14.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_14.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_14.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_15.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_15.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_15.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00097_Portrait_15.jpg" loading="lazy" alt="Portrait_15.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_15.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_15.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_15.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="portrait_16.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\portrait\portrait_16.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Portrait/Portrait_16.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00098_Portrait_16.jpg" loading="lazy" alt="Portrait_16.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Portrait_16.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_16.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Portrait\Portrait_16.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_01.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_01.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_01.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00099_Sport_&amp;_collectifs_01.jpg" loading="lazy" alt="Sport_&amp;_collectifs_01.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_01.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_01.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_01.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_02.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_02.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_02.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00100_Sport_&amp;_collectifs_02.jpg" loading="lazy" alt="Sport_&amp;_collectifs_02.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_02.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_02.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_02.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_03.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_03.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_03.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00101_Sport_&amp;_collectifs_03.jpg" loading="lazy" alt="Sport_&amp;_collectifs_03.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_03.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_03.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_03.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_04.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_04.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_04.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00102_Sport_&amp;_collectifs_04.jpg" loading="lazy" alt="Sport_&amp;_collectifs_04.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_04.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_04.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_04.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_05.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_05.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_05.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00103_Sport_&amp;_collectifs_05.jpg" loading="lazy" alt="Sport_&amp;_collectifs_05.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_05.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_05.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_05.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_06.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_06.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_06.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00104_Sport_&amp;_collectifs_06.jpg" loading="lazy" alt="Sport_&amp;_collectifs_06.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_06.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_06.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_06.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_07.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_07.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_07.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00105_Sport_&amp;_collectifs_07.jpg" loading="lazy" alt="Sport_&amp;_collectifs_07.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_07.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_07.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_07.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_08.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_08.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_08.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00106_Sport_&amp;_collectifs_08.jpg" loading="lazy" alt="Sport_&amp;_collectifs_08.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_08.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_08.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_08.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_09.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_09.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_09.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00107_Sport_&amp;_collectifs_09.jpg" loading="lazy" alt="Sport_&amp;_collectifs_09.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_09.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_09.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_09.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_10.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_10.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_10.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00108_Sport_&amp;_collectifs_10.jpg" loading="lazy" alt="Sport_&amp;_collectifs_10.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_10.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_10.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_10.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_11.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_11.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_11.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00109_Sport_&amp;_collectifs_11.jpg" loading="lazy" alt="Sport_&amp;_collectifs_11.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_11.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_11.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_11.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_12.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_12.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_12.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00110_Sport_&amp;_collectifs_12.jpg" loading="lazy" alt="Sport_&amp;_collectifs_12.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_12.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_12.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_12.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_13.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_13.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_13.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00111_Sport_&amp;_collectifs_13.jpg" loading="lazy" alt="Sport_&amp;_collectifs_13.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_13.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_13.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_13.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="sport_&amp;_collectifs_14.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\sport &amp; collectifs\sport_&amp;_collectifs_14.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/Sport%20%26%20collectifs/Sport_%26_collectifs_14.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00112_Sport_&amp;_collectifs_14.jpg" loading="lazy" alt="Sport_&amp;_collectifs_14.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">Sport_&amp;_collectifs_14.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_14.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Sport &amp; collectifs\Sport_&amp;_collectifs_14.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-01.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-01.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-01.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00113_evenementiel-01.jpg" loading="lazy" alt="evenementiel-01.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-01.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-01.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-01.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-02.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-02.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-02.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00114_evenementiel-02.jpg" loading="lazy" alt="evenementiel-02.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-02.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-02.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-02.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-03.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-03.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-03.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00115_evenementiel-03.jpg" loading="lazy" alt="evenementiel-03.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-03.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-03.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-03.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-04.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-04.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-04.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00116_evenementiel-04.jpg" loading="lazy" alt="evenementiel-04.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-04.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-04.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-04.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-05.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-05.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-05.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00117_evenementiel-05.jpg" loading="lazy" alt="evenementiel-05.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-05.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-05.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-05.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-06.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-06.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-06.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00118_evenementiel-06.jpg" loading="lazy" alt="evenementiel-06.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-06.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-06.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-06.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-07.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-07.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-07.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00119_evenementiel-07.jpg" loading="lazy" alt="evenementiel-07.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-07.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-07.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-07.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-08.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-08.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-08.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00120_evenementiel-08.jpg" loading="lazy" alt="evenementiel-08.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-08.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-08.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-08.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-09.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-09.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-09.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00121_evenementiel-09.jpg" loading="lazy" alt="evenementiel-09.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-09.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-09.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-09.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-10.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-10.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-10.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00122_evenementiel-10.jpg" loading="lazy" alt="evenementiel-10.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-10.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-10.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-10.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-11.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-11.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-11.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00123_evenementiel-11.jpg" loading="lazy" alt="evenementiel-11.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-11.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-11.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-11.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-12.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-12.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-12.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00124_evenementiel-12.jpg" loading="lazy" alt="evenementiel-12.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-12.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-12.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-12.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-13.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-13.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-13.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00125_evenementiel-13.jpg" loading="lazy" alt="evenementiel-13.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-13.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-13.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-13.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-14.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-14.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-14.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00126_evenementiel-14.jpg" loading="lazy" alt="evenementiel-14.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-14.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-14.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-14.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-15.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-15.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-15.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00127_evenementiel-15.jpg" loading="lazy" alt="evenementiel-15.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-15.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-15.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-15.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-16.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-16.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-16.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00128_evenementiel-16.jpg" loading="lazy" alt="evenementiel-16.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-16.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-16.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-16.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-17.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-17.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-17.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00129_evenementiel-17.jpg" loading="lazy" alt="evenementiel-17.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-17.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-17.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-17.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-18.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-18.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-18.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00130_evenementiel-18.jpg" loading="lazy" alt="evenementiel-18.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-18.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-18.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-18.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-19.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-19.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-19.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00131_evenementiel-19.jpg" loading="lazy" alt="evenementiel-19.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-19.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-19.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-19.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-20.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-20.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-20.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00132_evenementiel-20.jpg" loading="lazy" alt="evenementiel-20.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-20.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-20.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-20.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-21.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-21.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-21.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00133_evenementiel-21.jpg" loading="lazy" alt="evenementiel-21.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-21.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-21.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-21.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-22.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-22.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-22.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00134_evenementiel-22.jpg" loading="lazy" alt="evenementiel-22.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-22.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-22.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-22.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-23.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-23.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-23.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00135_evenementiel-23.jpg" loading="lazy" alt="evenementiel-23.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-23.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-23.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-23.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-24.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-24.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-24.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00136_evenementiel-24.jpg" loading="lazy" alt="evenementiel-24.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-24.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-24.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-24.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-25.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-25.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-25.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00137_evenementiel-25.jpg" loading="lazy" alt="evenementiel-25.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-25.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-25.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-25.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-26.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-26.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-26.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00138_evenementiel-26.jpg" loading="lazy" alt="evenementiel-26.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-26.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-26.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-26.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        <article class="card" data-search="evenementiel-27.jpg c:\users\gallien\documents\github\instant-gh\assets\photos\événementiel\evenementiel-27.jpg">
+            <a href="file:///C:/Users/Gallien/Documents/GitHub/instant-gh/assets/photos/%C3%89v%C3%A9nementiel/evenementiel-27.jpg" target="_blank" title="Ouvrir l'image originale">
+                <img src="vignettes/00139_evenementiel-27.jpg" loading="lazy" alt="evenementiel-27.jpg">
+            </a>
+
+            <div class="meta">
+                <div class="filename">evenementiel-27.jpg</div>
+                <div class="path">C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-27.jpg</div>
+            </div>
+
+            <button onclick="copyText('C:\Users\Gallien\Documents\GitHub\instant-gh\assets\photos\Événementiel\evenementiel-27.jpg')">
+                Copier le chemin
+            </button>
+        </article>
+        
+        </section>
+    </main>
+
+    <script>
+        const searchInput = document.getElementById("search");
+        const cards = document.querySelectorAll(".card");
+
+        searchInput.addEventListener("input", function() {
+            const q = this.value.toLowerCase();
+
+            cards.forEach(card => {
+                const txt = card.dataset.search;
+                card.style.display = txt.includes(q) ? "" : "none";
+            });
+        });
+
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Chemin copié dans le presse-papiers.");
+            });
+        }
+    </script>
+</body>
+</html>
