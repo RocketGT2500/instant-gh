@@ -40,7 +40,7 @@
           </div>
         </div>
         <div class="hero-card reveal photo-card-main">
-          <img id="hero-carousel-image" src="assets/photos/Moto &amp; mécanique/Moto_&amp;_mécanique_14.jpg" alt="Photographie de terrain Instant.GH" class="photo-fill" />
+          <img id="hero-carousel-image" src="assets/photos/Moto &amp; mécanique/Moto_&amp;_mécanique_14.jpg?v=20260810-2323" alt="Photographie de terrain Instant.GH" class="photo-fill" />
           <div class="photo-overlay"><strong id="hero-carousel-title">Puissance · Mouvement · Terrain</strong></div>
         </div>
       </section>
@@ -111,13 +111,15 @@
     <footer class="footer"><p>© <span id="year"></span> Instant.GH — Photographie de terrain</p><div class="footer-links"><a href="mentions.html">Mentions / informations</a><a href="https://www.instagram.com/instant.gh/" target="_blank" rel="noreferrer">Instagram</a><a href="https://gallienc.myportfolio.com/" target="_blank" rel="noreferrer">Portfolio</a><a href="https://paypal.me/instantGH?locale.x=fr_FR&country.x=FR" target="_blank" rel="noreferrer">Soutenir</a><a href="#accueil">Retour en haut</a></div></footer>
 
     <script>
-      const seq = (folder, prefix, start, end, pad = 2) => Array.from({length: end-start+1}, (_, i) => `${folder}/${prefix}${String(start+i).padStart(pad,'0')}.jpg`);
+      const PHOTO_VERSION = "20260810-2323";
+      const photo = src => `${src}?v=${PHOTO_VERSION}`;
+      const seq = (folder, prefix, start, end, pad = 2) => Array.from({length: end-start+1}, (_, i) => photo(`${folder}/${prefix}${String(start+i).padStart(pad,'0')}.jpg`));
 
       const categories = [
         {
           id: "moto-mecanique",
           title: "Moto & mécanique",
-          cover: "assets/photos/Moto & mécanique/Moto_&_mécanique_14.jpg",
+          cover: photo("assets/photos/Moto & mécanique/Moto_&_mécanique_14.jpg"),
           images: seq("assets/photos/Moto & mécanique", "Moto_&_mécanique_", 1, 43),
           text: "Motos en action, portraits de motards, détails mécaniques et machines de caractère.",
           tags: ["motos", "mécanique", "action", "portraits motards"]
@@ -125,7 +127,7 @@
         {
           id: "sport-collectifs",
           title: "Sport & collectifs",
-          cover: "assets/photos/Sport & collectifs/Sport_&_collectifs_08.jpg",
+          cover: photo("assets/photos/Sport & collectifs/Sport_&_collectifs_08.jpg"),
           images: seq("assets/photos/Sport & collectifs", "Sport_&_collectifs_", 1, 14),
           text: "Le sport comme sujet de tension collective : groupe, portraits, action, regard de match.",
           tags: ["hockey", "collectif", "action glace", "portraits joueurs"]
@@ -133,15 +135,15 @@
         {
           id: "aviation",
           title: "Aviation",
-          cover: "assets/photos/Aviation/aviation-01.jpg",
-          images: ["assets/photos/Aviation/aviation-01.jpg","assets/photos/Aviation/aviation-02.jpg","assets/photos/Aviation/aviation-3.jpg","assets/photos/Aviation/aviation-04.jpg","assets/photos/Aviation/aviation-05.jpg","assets/photos/Aviation/aviation-06.jpg","assets/photos/Aviation/aviation-07.jpg","assets/photos/Aviation/aviation-08.jpg","assets/photos/Aviation/aviation-09.jpg","assets/photos/Aviation/aviation-10.jpg"],
+          cover: photo("assets/photos/Aviation/aviation-01.jpg"),
+          images: ["assets/photos/Aviation/aviation-01.jpg","assets/photos/Aviation/aviation-02.jpg","assets/photos/Aviation/aviation-3.jpg","assets/photos/Aviation/aviation-04.jpg","assets/photos/Aviation/aviation-05.jpg","assets/photos/Aviation/aviation-06.jpg","assets/photos/Aviation/aviation-07.jpg","assets/photos/Aviation/aviation-08.jpg","assets/photos/Aviation/aviation-09.jpg","assets/photos/Aviation/aviation-10.jpg"].map(photo),
           text: "Meetings aériens, patrouilles, acrobaties et machines de légende.",
           tags: ["meetings aériens", "patrouilles", "acrobaties", "machines"]
         },
         {
           id: "evenementiel",
           title: "Événementiel",
-          cover: "assets/photos/Événementiel/evenementiel_01.jpg",
+          cover: photo("assets/photos/Événementiel/evenementiel_01.jpg"),
           images: seq("assets/photos/Événementiel", "evenementiel_", 1, 28),
           text: "Concerts, festivals, scènes nocturnes, reconstitution et ambiances fortes.",
           tags: ["concerts", "festivals", "événements nocturnes", "reconstitution"]
@@ -149,7 +151,7 @@
         {
           id: "defense-defiles",
           title: "Défense & défilés",
-          cover: "assets/photos/Défense & défilés/Défense_&_défilés_001.jpg",
+          cover: photo("assets/photos/Défense & défilés/Défense_&_défilés_001.jpg"),
           images: seq("assets/photos/Défense & défilés", "Défense_&_défilés_", 1, 23, 3),
           text: "Action, poussière, blindés, défilés et scènes de terrain.",
           tags: ["blindés", "défilés", "cavalerie", "terrain"]
@@ -157,7 +159,7 @@
         {
           id: "animalier",
           title: "Animalier",
-          cover: "assets/photos/Animalier/Animalier_01.jpg",
+          cover: photo("assets/photos/Animalier/Animalier_01.jpg"),
           images: seq("assets/photos/Animalier", "Animalier_", 1, 29),
           text: "Regards, instinct, présence et détails naturels.",
           tags: ["faune", "oiseaux", "macro", "animaux de compagnie"]
@@ -165,7 +167,7 @@
         {
           id: "portrait",
           title: "Portrait",
-          cover: "assets/photos/Portrait/Portrait_11.jpg",
+          cover: photo("assets/photos/Portrait/Portrait_11.jpg"),
           images: seq("assets/photos/Portrait", "Portrait_", 1, 16),
           text: "Portraits dynamiques, en situation, liés à un univers.",
           tags: ["sportifs", "musiciens", "artisans", "motards"]
@@ -183,17 +185,17 @@
       };
 
       const heroImages = [
-        ["assets/photos/Moto & mécanique/Moto_&_mécanique_14.jpg", "Puissance · Mouvement · Terrain"],
-        ["assets/photos/Moto & mécanique/Moto_&_mécanique_01.jpg", "Vitesse · Route · Instinct"],
-        ["assets/photos/Moto & mécanique/Moto_&_mécanique_39.jpg", "Mécanique · Ligne · Caractère"],
-        ["assets/photos/Aviation/aviation-01.jpg", "Précision · Ciel · Vitesse"],
-        ["assets/photos/Animalier/Animalier_01.jpg", "Regard · Instinct · Présence"],
-        ["assets/photos/Animalier/Animalier_10.jpg", "Présence · Regard · Nature"],
-        ["assets/photos/Défense & défilés/Défense_&_défilés_001.jpg", "Action · Poussière · Terrain"],
-        ["assets/photos/Sport & collectifs/Sport_&_collectifs_08.jpg", "Collectif · Tension · Geste"],
-        ["assets/photos/Événementiel/evenementiel_01.jpg", "Lumière · Scène · Émotion"],
-        ["assets/photos/Événementiel/evenementiel_28.jpg", "Événement · Moment · Mémoire"],
-        ["assets/photos/Portrait/Portrait_11.jpg", "Portrait · Présence · Instant"]
+        [photo("assets/photos/Moto & mécanique/Moto_&_mécanique_14.jpg"), "Puissance · Mouvement · Terrain"],
+        [photo("assets/photos/Moto & mécanique/Moto_&_mécanique_01.jpg"), "Vitesse · Route · Instinct"],
+        [photo("assets/photos/Moto & mécanique/Moto_&_mécanique_39.jpg"), "Mécanique · Ligne · Caractère"],
+        [photo("assets/photos/Aviation/aviation-01.jpg"), "Précision · Ciel · Vitesse"],
+        [photo("assets/photos/Animalier/Animalier_01.jpg"), "Regard · Instinct · Présence"],
+        [photo("assets/photos/Animalier/Animalier_10.jpg"), "Présence · Regard · Nature"],
+        [photo("assets/photos/Défense & défilés/Défense_&_défilés_001.jpg"), "Action · Poussière · Terrain"],
+        [photo("assets/photos/Sport & collectifs/Sport_&_collectifs_08.jpg"), "Collectif · Tension · Geste"],
+        [photo("assets/photos/Événementiel/evenementiel_01.jpg"), "Lumière · Scène · Émotion"],
+        [photo("assets/photos/Événementiel/evenementiel_28.jpg"), "Événement · Moment · Mémoire"],
+        [photo("assets/photos/Portrait/Portrait_11.jpg"), "Portrait · Présence · Instant"]
       ];
 
       const escapeHtml = value => String(value).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
@@ -244,6 +246,6 @@
         setInterval(()=>{heroIndex++;if(heroIndex>=heroSequence.length){heroSequence=shuffle(heroImages);heroIndex=0;}applyHero(heroSequence[heroIndex]);},5200);
       }
     </script>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260810-2323"></script>
   </body>
 </html>
