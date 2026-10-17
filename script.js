@@ -256,7 +256,7 @@ async function initPhotoSite() {
 
   async function loadCatalogue() {
     try {
-      const response = await fetch('catalogue.json?v=20261017-3');
+      const response = await fetch('catalogue.json?v=20261017-4');
       if (!response.ok) throw new Error('Catalogue indisponible');
       const catalogue = await response.json();
       if (!Array.isArray(catalogue.categories) || !catalogue.categories.length

@@ -6,7 +6,7 @@ Site vitrine statique de Gallien Humez, publié sur https://instant-gh.fr/ avec 
 
 - index.html : accueil, accès aux dix thèmes, projets, présentation et contact.
 - script.js : menu mobile, galeries, visionneuse, pause du diaporama et chargement du formulaire.
-- catalogue.json : 217 photos, descriptions visuelles et variantes WebP, avec couvertures choisies puis classement par note Bridge décroissante.
+- catalogue.json : 221 photos, descriptions visuelles et variantes WebP, avec couvertures choisies puis classement par note Bridge décroissante.
 - styles.css : mise en page commune et navigation.
 - catalogue.css : couvertures, galeries et visionneuse.
 - contact-form.css : contact et intégration Tally.
@@ -32,11 +32,13 @@ Le diaporama peut être mis en pause ; il est suspendu hors écran, dans un ongl
 ou pendant l’utilisation de la visionneuse. Il démarre en pause si la réduction des
 animations ou l’économie de données est activée.
 
-Les 217 photos conservent leurs variantes et leurs notes : 71 photos à cinq étoiles,
-86 à quatre, 43 à trois, 14 à deux et trois à une étoile.
+Les 217 photos initiales conservent leurs variantes et leurs notes : 71 photos à cinq étoiles,
+86 à quatre, 43 à trois, 14 à deux et trois à une étoile. Quatre photographies automobiles
+sans note (4D0A3142, 4D0A3219, 4D0A3804 et 4D0A3840), ajoutées à la demande du photographe,
+portent le total à 221 photos et la galerie Automobiles et circuit à 20 photos.
 Chaque image possède un aperçu de 480 pixels de large au maximum, un aperçu de 960 pixels
 et un agrandissement de 1920 pixels sur le côté long au maximum.
-Les trois variantes représentent environ 46,5 Mo et ne sont pas chargées toutes ensemble.
+Les trois variantes représentent environ 47,6 Mo et ne sont pas chargées toutes ensemble.
 
 ## Formulaire Tally
 
