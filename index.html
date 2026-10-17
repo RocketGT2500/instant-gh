@@ -3,116 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Instant.GH - Photographie de terrain entre Cholet, Clisson et Nantes : moto, automobiles, sport, aviation, animalier, paysages, concerts, portraits et événements locaux." />
-    <title>Instant.GH — Photographie de terrain en Pays de la Loire</title>
+    <meta name="description" content="Instant.GH, photographie de terrain entre Cholet, Clisson et Nantes : découvrez les séries moto, sport, concerts, portraits et nature de Gallien Humez." />
+    <title>Instant.GH — Photographie de terrain à Cholet, Clisson et Nantes</title>
     <link rel="canonical" href="https://instant-gh.fr/" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="photo-fixes.css" />
-    <link rel="stylesheet" href="site-upgrades.css" />
-    <link rel="stylesheet" href="contact-form.css" />
-    <link rel="stylesheet" href="catalogue.css?v=20261017" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Instant.GH" />
+    <meta property="og:title" content="Instant.GH — Lumière. Mouvement. Instant." />
+    <meta property="og:description" content="Les séries photo de Gallien Humez : moto, sport, concerts, portraits et nature en Pays de la Loire." />
+    <meta property="og:url" content="https://instant-gh.fr/" />
+    <meta property="og:image" content="https://instant-gh.fr/assets/catalogue/automobiles-circuit/001-01-sportives-01-voiture-lamborghini-huracan-007-4d0a5576-1aaa2164d9-full.webp" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1281" />
+    <meta property="og:image:alt" content="Voiture sportive rouge entrant dans un virage sur circuit" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="styles.css?v=20261017-2" />
+    <link rel="stylesheet" href="catalogue.css?v=20261017-2" />
+    <link rel="stylesheet" href="contact-form.css?v=20261017-2" />
   </head>
   <body>
-    <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
     <header class="site-header" id="accueil">
-      <nav class="nav">
-        <a class="brand" href="#accueil">
-          <span class="brand-mark">GH</span>
-          <span><strong>Instant.GH</strong><small>Photographie de terrain</small></span>
-        </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="brand" href="#accueil"><span class="brand-mark" aria-hidden="true">GH</span><span><strong>Instant.GH</strong><small>Photographie de terrain</small></span></a>
         <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
-        <div class="nav-links" id="main-menu">
-          <a href="#demarche">Démarche</a>
-          <a href="#apropos">À propos</a>
-          <a href="#series">Séries</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#soutenir">Soutenir</a>
-          <a href="#contact">Contact</a>
-        </div>
+        <div class="nav-links" id="main-menu"><a href="#series">Séries</a><a href="#prestations">Projets photo</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></div>
       </nav>
-
-      <section class="hero">
-        <div class="hero-copy reveal">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
           <p class="eyebrow">Cholet · Clisson · Nantes · Pays de la Loire</p>
-          <h1>Lumière. Mouvement. Instant.</h1>
-          <p class="hero-text">Instant.GH rassemble des séries photo de terrain : moto, automobiles, sport, aviation, animalier, paysages, concerts, portraits et événements locaux. L’envie est simple : immortaliser un moment, saisir une émotion, figer le temps avant qu’il ne disparaisse.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#contact">Me contacter</a>
-            <a class="button ghost" href="#series">Voir les séries</a>
-          </div>
+          <h1 id="hero-title">Lumière.<br />Mouvement.<br />Instant.</h1>
+          <p class="hero-text">Je suis Gallien. Je photographie les rencontres, l’action et les ambiances de terrain : moto, sport, concerts, portraits et nature.</p>
+          <div class="hero-actions"><a class="button primary" href="#series">Découvrir les séries</a><a class="button ghost" href="#contact">Parlons de votre projet</a></div>
         </div>
-        <div class="hero-card reveal photo-card-main">
-          <img id="hero-carousel-image" src="assets/catalogue/moto-mecanique/001-01-l-esprit-du-rendez-vous-4d0a2315-89b86d45a7-medium.webp" srcset="assets/catalogue/moto-mecanique/001-01-l-esprit-du-rendez-vous-4d0a2315-89b86d45a7-small.webp 480w, assets/catalogue/moto-mecanique/001-01-l-esprit-du-rendez-vous-4d0a2315-89b86d45a7-medium.webp 960w" sizes="(max-width: 860px) calc(100vw - 32px), (max-width: 1212px) 42vw, 513px" width="960" height="1439" alt="Motos et esprit biker · photographie 001 · Instant.GH" class="photo-fill" fetchpriority="high" decoding="async" />
-          <div class="photo-overlay"><strong id="hero-carousel-title">Motos et esprit biker</strong></div>
+        <div class="hero-visual">
+          <figure class="hero-card"><img id="hero-carousel-image" src="assets/catalogue/moto-mecanique/047-06-libertes-en-mouvement-4d0a5291-e7e762fada-medium.webp" srcset="assets/catalogue/moto-mecanique/047-06-libertes-en-mouvement-4d0a5291-e7e762fada-small.webp 480w, assets/catalogue/moto-mecanique/047-06-libertes-en-mouvement-4d0a5291-e7e762fada-medium.webp 960w" sizes="(max-width: 860px) calc(100vw - 32px), 48vw" width="960" height="540" alt="Motard portant des oreilles roses sur son casque, photographié en mouvement" fetchpriority="high" decoding="async" /><figcaption id="hero-carousel-title">Motos et esprit biker</figcaption></figure>
+          <button id="hero-pause" class="text-button" type="button" hidden>Mettre le diaporama en pause</button>
         </div>
       </section>
     </header>
-
-    <main>
-      <section class="section intro" id="demarche">
-        <div class="section-heading reveal"><p class="eyebrow">Démarche</p><h2>Une image de terrain, puissante et maîtrisée.</h2></div>
-        <div class="intro-grid">
-          <article class="text-block reveal"><h3>L’instant lisible</h3><p>Je cherche le moment où le sujet devient évident : une vitesse, un regard, une lumière, une tension, une présence.</p></article>
-          <article class="text-block reveal"><h3>Émotion et mémoire</h3><p>Une photo peut immobiliser une fraction de seconde, conserver une intensité et rendre visible ce qui disparaît presque aussitôt.</p></article>
-          <article class="text-block reveal"><h3>Territoire</h3><p>Basé entre Clisson et Cholet. Déplacements possibles en Vendée, Nantes, Pays de la Loire et Bretagne selon le projet.</p></article>
-        </div>
+    <main id="contenu">
+      <section class="section" id="series" aria-labelledby="series-title">
+        <div class="section-heading"><p class="eyebrow">Les photographies</p><h2 id="series-title">Choisissez votre terrain.</h2><p>Dix univers à explorer. Chaque galerie commence par une sélection de huit images au maximum.</p></div>
+        <nav class="category-covers" aria-label="Choisir une galerie"><a class="category-cover" data-gallery-target="animalier" href="https://gallienc.myportfolio.com/"><img  src="assets/catalogue/animalier/001-01-ailes-et-rapaces-dscf1458-b550c06774-small.webp" srcset="assets/catalogue/animalier/001-01-ailes-et-rapaces-dscf1458-b550c06774-small.webp 480w, assets/catalogue/animalier/001-01-ailes-et-rapaces-dscf1458-b550c06774-medium.webp 960w" sizes="(max-width: 600px) 44vw, (max-width: 1000px) 30vw, 220px" width="960" height="616" alt="Rapace blanc de profil sur fond noir" loading="lazy" decoding="async" /><span>Faune et regards sauvages<small>46 photos</small></span></a><a class="category-cover" data-gallery-target="paysages-patrimoine" href="https://gallienc.myportfolio.com/"><img  src="assets/catalogue/paysages-patrimoine/001-01-du-rivage-aux-grands-espaces-4d0a6374-e23c7bc971-small.webp" srcset="assets/catalogue/paysages-patrimoine/001-01-du-rivage-aux-grands-espaces-4d0a6374-e23c7bc971-small.webp 480w, assets/catalogue/paysages-patrimoine/001-01-du-rivage-aux-grands-espaces-4d0a6374-e23c7bc971-medium.webp 960w" sizes="(max-width: 600px) 44vw, (max-width: 1000px) 30vw, 220px" width="960" height="540" alt="Côte rocheuse et mer calme dans une lumière dorée" loading="lazy" decoding="async" /><span>Paysages et patrimoine<small>28 photos</small></span></a><a class="category-cover" data-gallery-target="moto-mecanique" href="https://gallienc.myportfolio.com/"><img  src="assets/catalogue/moto-mecanique/001-01-l-esprit-du-rendez-vous-4d0a2315-89b86d45a7-small.webp" srcset="assets/catalogue/moto-mecanique/001-01-l-esprit-du-rendez-vous-4d0a2315-89b86d45a7-small.webp 480w, assets/catalogue/moto-mecanique/001-01-l-esprit-du-rendez-vous-4d0a2315-89b86d45a7-medium.webp 960w" sizes="(max-width: 600px) 44vw, (max-width: 1000px) 30vw, 220px" width="960" height="1439" alt="Moto noire et jaune stationnée sous un ciel doré" loading="lazy" decoding="async" /><span>Motos et esprit biker<small>33 photos</small></span></a><a class="category-cover" data-gallery-target="automobiles-circuit" href="https://gallienc.myportfolio.com/"><img  src="assets/catalogue/automobiles-circuit/001-01-sportives-01-voiture-lamborghini-huracan-007-4d0a5576-1aaa2164d9-small.webp" srcset="assets/catalogue/automobiles-circuit/001-01-sportives-01-voiture-lamborghini-huracan-007-4d0a5576-1aaa2164d9-small.webp 480w, assets/catalogue/automobiles-circuit/001-01-sportives-01-voiture-lamborghini-huracan-007-4d0a5576-1aaa2164d9-medium.webp 960w" sizes="(max-width: 600px) 44vw, (max-width: 1000px) 30vw, 220px" width="960" height="640" alt="Voiture sportive rouge entrant dans un virage sur circuit" loading="lazy" decoding="async" /><span>Automobiles et circuit<small>16 photos</small></span></a><a class="category-cover" data-gallery-target="sport-collectifs" href="https://gallienc.myportfolio.com/"><img  src="assets/catalogue/sport-collectifs/001-01-avant-le-match-4d0003-56c890d52b-small.webp" srcset="assets/catalogue/sport-collectifs/001-01-avant-le-match-4d0003-56c890d52b-small.webp 480w, assets/catalogue/sport-collectifs/001-01-avant-le-match-4d0003-56c890d52b-medium.webp 960w" sizes="(max-width: 600px) 44vw, (max-width: 1000px) 30vw, 220px" width="960" height="1707" alt="Joueur de hockey vu de dos dans le couloir des vestiaires" loading="lazy" decoding="async" /><span>Hockey, vie de glace<small>16 photos</small></span></a><a class="category-cover" data-gallery-target="aviation" href="https://gallienc.myportfolio.com/"><img  src="assets/catalogue/aviation/001-01-les-avions-d-histoire-dscf9047-mute-7c664282f8-small.webp" srcset="assets/catalogue/aviation/001-01-les-avions-d-histoire-dscf9047-mute-7c664282f8-small.webp 480w, assets/catalogue/aviation/001-01-les-avions-d-histoire-dscf9047-mute-7c664282f8-medium.webp 960w" sizes="(max-width: 600px) 44vw, (max-width: 1000px) 30vw, 220px" width="960" height="640" alt="Avion ancien bimoteur en vol sous les nuages" loading="lazy" decoding="async" /><span>Aviation et défense<small>23 photos</small></span></a><a class="category-cover" data-gallery-target="evenementiel" href="https://gallienc.myportfolio.com/"><img  src="assets/catalogue/evenementiel/001-01-voix-et-guitares-dscf3912-5d8305fae8-small.webp" srcset="assets/catalogue/evenementiel/001-01-voix-et-guitares-dscf3912-5d8305fae8-small.webp 480w, assets/catalogue/evenementiel/001-01-voix-et-guitares-dscf3912-5d8305fae8-medium.webp 960w" sizes="(max-width: 600px) 44vw, (max-width: 1000px) 30vw, 220px" width="960" height="540" alt="Chanteur au micro sous les lumières colorées d’une scène" loading="lazy" decoding="async" /><span>Musiques, concerts et Hellfest<small>8 photos</small></span></a><a class="category-cover" data-gallery-target="portrait" href="https://gallienc.myportfolio.com/"><img  src="assets/catalogue/portrait/001-01-complicites-1-dscf3425-fc65483872-small.webp" srcset="assets/catalogue/portrait/001-01-complicites-1-dscf3425-fc65483872-small.webp 480w, assets/catalogue/portrait/001-01-complicites-1-dscf3425-fc65483872-medium.webp 960w" sizes="(max-width: 600px) 44vw, (max-width: 1000px) 30vw, 220px" width="960" height="540" alt="Portrait en noir et blanc d’une personne aux cheveux bouclés et aux lunettes" loading="lazy" decoding="async" /><span>Portraits et rencontres<small>26 photos</small></span></a><a class="category-cover" data-gallery-target="arts-legendes" href="https://gallienc.myportfolio.com/"><img  src="assets/catalogue/arts-legendes/001-01-quand-l-imaginaire-s-anime-dscf9579-7d371d4897-small.webp" srcset="assets/catalogue/arts-legendes/001-01-quand-l-imaginaire-s-anime-dscf9579-7d371d4897-small.webp 480w, assets/catalogue/arts-legendes/001-01-quand-l-imaginaire-s-anime-dscf9579-7d371d4897-medium.webp 960w" sizes="(max-width: 600px) 44vw, (max-width: 1000px) 30vw, 220px" width="960" height="640" alt="Dragon mécanique devant un bâtiment sous un ciel nuageux" loading="lazy" decoding="async" /><span>Arts, légendes et curiosités<small>9 photos</small></span></a><a class="category-cover" data-gallery-target="lumieres-nuits" href="https://gallienc.myportfolio.com/"><img  src="assets/catalogue/lumieres-nuits/001-01-sous-le-ciel-nocturne-4d0a2263-hdr-bd3a2d8b8d-small.webp" srcset="assets/catalogue/lumieres-nuits/001-01-sous-le-ciel-nocturne-4d0a2263-hdr-bd3a2d8b8d-small.webp 480w, assets/catalogue/lumieres-nuits/001-01-sous-le-ciel-nocturne-4d0a2263-hdr-bd3a2d8b8d-medium.webp 960w" sizes="(max-width: 600px) 44vw, (max-width: 1000px) 30vw, 220px" width="960" height="640" alt="Voie lactée et étoiles dans le ciel nocturne" loading="lazy" decoding="async" /><span>Lumières et nuits<small>12 photos</small></span></a></nav>
+        <div class="category-list" id="category-list" aria-label="Galeries photo"><p class="catalogue-loading">Chargement des galeries…</p></div>
+        <noscript><p>Les aperçus ci-dessus présentent les thèmes. Pour consulter les photographies sans JavaScript, <a href="https://gallienc.myportfolio.com/">ouvrez les collections sur Adobe Portfolio</a>.</p></noscript>
       </section>
-
-      <section class="section dark" id="apropos">
-        <div class="section-heading reveal"><p class="eyebrow">À propos</p><h2>Gallien, derrière Instant.GH.</h2></div>
-        <div class="about-grid">
-          <article class="about-card reveal"><strong>Photographie de terrain</strong><p>Je m’appelle Gallien, je suis basé entre Clisson et Cholet. La photographie est devenue pour moi une manière de garder les moments qui passent trop vite : un regard, une vitesse, une lumière, une émotion.</p><p>Avec Instant.GH, je construis des séries autour de sujets vivants et puissants : moto, sport, aviation, animalier, concerts et événements de terrain.</p></article>
-          <article class="status-card reveal"><h3>Une approche directe</h3><p>Mon approche reste simple : observer, cadrer, déclencher au moment où l’image devient évidente.</p><p>Chaque série est pensée pour raconter un sujet avec cohérence : une accroche forte, des détails, de l’action, une ambiance et une image finale mémorable.</p></article>
-        </div>
-      </section>
-
-      <section class="section dark" id="series">
-        <div class="section-heading reveal"><p class="eyebrow">Séries</p><h2>Des galeries par thème.</h2></div>
-        <div class="category-list" id="category-list" aria-label="Galeries photo"></div>
-        <noscript><p>Pour parcourir les galeries interactives, activez JavaScript ou <a href="https://gallienc.myportfolio.com/">consultez le portfolio photo</a>.</p></noscript>
-      </section>
-
-      <section class="section" id="portfolio">
-        <div class="portfolio-card reveal">
-          <div><p class="eyebrow">Portfolio complet</p><h2>Voir une sélection plus large.</h2><p>Ce site présente l’identité Instant.GH et les séries principales. Le portfolio Adobe rassemble davantage d’images, de projets et d’ambiances pour découvrir plus largement mon travail photographique.</p></div>
-          <a class="button primary" href="https://gallienc.myportfolio.com/" target="_blank" rel="noreferrer">Ouvrir le portfolio</a>
-        </div>
-      </section>
-
-      <section class="section dark" id="soutenir">
-        <div class="section-heading reveal"><p class="eyebrow">Soutenir</p><h2>Un coup de pouce pour continuer à photographier le terrain.</h2></div>
-        <div class="project-list"><article class="project reveal"><div><p class="project-tag">Soutien volontaire</p><h3>Participer aux prochaines séries.</h3></div><div><p>Une partie de mes images est réalisée bénévolement pour des groupes, associations, clubs et événements locaux. Si vous appréciez le travail ou souhaitez aider à couvrir les frais de déplacement, de matériel et de temps passé en tri/retouche, vous pouvez laisser un soutien libre.</p><p>Chaque contribution aide à poursuivre les séries photo Instant.GH, sans transformer la démarche en vente forcée.</p><a class="button primary" href="https://paypal.me/instantGH?locale.x=fr_FR&country.x=FR" target="_blank" rel="noreferrer">Soutenir via PayPal</a></div></article></div>
-      </section>
-
-      <section class="section" id="projets">
-        <div class="section-heading reveal"><p class="eyebrow">Projets</p><h2>Construire des séries utiles, pas seulement des images isolées.</h2></div>
-        <div class="project-list">
-          <article class="project reveal"><div><p class="project-tag">Série événementielle</p><h3>Raconter un rassemblement</h3></div><p>Une sélection courte et cohérente : photo d’accroche, détails, action, ambiance, image finale.</p></article>
-          <article class="project reveal"><div><p class="project-tag">Image de club</p><h3>Valoriser une équipe ou une discipline</h3></div><p>Produire des images qui montrent l’intensité, la précision du geste et l’identité du groupe.</p></article>
-          <article class="project reveal"><div><p class="project-tag">Présence numérique</p><h3>Créer du contenu régulier</h3></div><p>Séries prêtes pour Instagram, TikTok, affiches, site ou supports de communication.</p></article>
-        </div>
-      </section>
-
-      <section class="section dark" id="prestations">
-        <div class="section-heading reveal"><p class="eyebrow">Formats possibles</p><h2>Une série photo pour raconter un moment.</h2></div>
+      <section class="section dark" id="prestations" aria-labelledby="projects-title">
+        <span id="projets" class="anchor-alias"></span>
+        <div class="section-heading"><p class="eyebrow">Projets photo</p><h2 id="projects-title">Un événement, une passion, une histoire.</h2><p>Basé entre Clisson et Cholet, je me déplace en Vendée, à Nantes et en Pays de la Loire. D’autres déplacements sont possibles selon le projet.</p></div>
         <div class="services-grid">
-          <article class="service reveal"><h3>Reportage local</h3><p>Documenter un événement, une journée associative, un rassemblement ou une scène de terrain.</p></article>
-          <article class="service reveal"><h3>Série photo courte</h3><p>Créer une sélection cohérente pour réseaux sociaux, communication locale ou souvenir d’un moment fort.</p></article>
-          <article class="service reveal"><h3>Portrait dynamique</h3><p>Photographier une personne dans son univers : motard, sportif, musicien, artisan ou passionné.</p></article>
-          <article class="service reveal"><h3>Collaboration</h3><p>Échanger autour d’un projet photo local, d’une série à construire ou d’une idée à documenter.</p></article>
+          <article class="service"><h3>Reportage et vie locale</h3><p>Rassemblement, concert, journée associative ou événement de club : raconter l’action autant que l’ambiance et les rencontres.</p></article>
+          <article class="service"><h3>Sport et mécanique</h3><p>Mettre en images une discipline, une équipe ou une machine, avec des vues d’ensemble, des détails et des moments de mouvement.</p></article>
+          <article class="service"><h3>Portrait dans votre univers</h3><p>Photographier une personne dans son environnement : motard, sportif, musicien, artisan ou passionné.</p></article>
         </div>
+        <div class="project-process"><h3>Comment se passe une demande ?</h3><ol><li>Vous me présentez le sujet, le lieu, la date et l’usage prévu des images.</li><li>Nous échangeons sur la faisabilité, le format et les conditions de la collaboration.</li><li>Nous définissons ensemble la sélection, le mode de livraison et les usages autorisés.</li></ol><a class="button primary" href="#contact">Présenter mon projet</a></div>
       </section>
-
-      <section class="contact-section" id="contact">
-        <div class="contact-card reveal">
-          <div><p class="eyebrow">Contact</p><h2>Un projet, une série, un événement à couvrir.</h2><p>Décrivez simplement le sujet, le lieu, la période et l’usage souhaité des images. Je vous répondrai pour voir ce qu’il est possible de construire.</p><div class="contact-actions contact-socials"><a class="button dark-button" href="https://www.instagram.com/instant.gh/" target="_blank" rel="noreferrer">Instagram · instant.gh</a><a class="button ghost light-ghost" href="https://gallienc.myportfolio.com/" target="_blank" rel="noreferrer">Portfolio complet</a></div></div>
-          <div class="tally-embed-card"><p class="eyebrow">Formulaire</p><h3>Demande photo — Instant.GH</h3><p>Remplissez le formulaire ci-dessous pour préciser le sujet, le lieu, la période envisagée et le contexte de la série.</p><iframe loading="lazy" src="https://tally.so/embed/816pel?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="720" frameborder="0" marginheight="0" marginwidth="0" title="Demande photo — Instant.GH"></iframe></div>
+      <section class="section about-section" id="apropos" aria-labelledby="about-title">
+        <span id="demarche" class="anchor-alias"></span>
+        <div class="section-heading"><p class="eyebrow">À propos</p><h2 id="about-title">Gallien, derrière Instant.GH.</h2></div>
+        <div class="about-copy"><p>La photographie est pour moi une manière de garder les moments qui passent trop vite : un regard, une vitesse, une lumière, une émotion.</p><p>Sur le terrain, je cherche des séries cohérentes : une image forte, des détails, de l’action et une ambiance. Mon approche reste directe : observer et déclencher au moment où le sujet devient évident.</p></div>
+        <aside class="portfolio-card" id="portfolio"><div><h3>Continuer sur Adobe Portfolio</h3><p>Un autre parcours de mes collections photographiques, dans une présentation dédiée aux images.</p></div><a class="button ghost" href="https://gallienc.myportfolio.com/" target="_blank" rel="noopener noreferrer">Explorer les collections</a></aside>
+        <aside class="support-note" id="soutenir"><h3>Soutenir les prochaines séries</h3><p>Une partie de mes reportages est réalisée bénévolement pour des groupes et événements locaux. Un soutien libre peut contribuer aux déplacements et au matériel.</p><a href="https://paypal.me/instantGH?locale.x=fr_FR&amp;country.x=FR" target="_blank" rel="noopener noreferrer">Laisser un soutien via PayPal ↗</a></aside>
+      </section>
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-card">
+          <div class="contact-heading"><p class="eyebrow">Contact</p><h2 id="contact-title">Parlons de votre prochain projet.</h2><p>Indiquez le sujet, le lieu, la période et l’usage souhaité des images. Nous pourrons échanger sur ce qu’il est possible de construire.</p><div class="contact-actions"><a href="mailto:gallien.c@hotmail.fr">gallien.c@hotmail.fr</a><a href="https://www.instagram.com/instant.gh/" target="_blank" rel="noopener noreferrer">Instagram · instant.gh ↗</a></div></div>
+          <div class="tally-embed-card"><h3>Votre demande photo</h3><p class="form-note">Les informations transmises servent à répondre à votre demande et à échanger sur votre projet. Le formulaire est fourni par Tally. <a href="mentions.html#donnees">En savoir plus sur vos données</a>.</p><iframe data-tally-src="https://tally.so/embed/816pel?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="200" title="Demande photo — Instant.GH"></iframe><p id="form-status" role="status"></p><p class="form-fallback">Vous pouvez aussi <a href="https://tally.so/r/816pel" target="_blank" rel="noopener noreferrer">ouvrir le formulaire dans une page dédiée ↗</a> ou m’écrire par email.</p></div>
         </div>
       </section>
     </main>
-
-    <footer class="footer"><p>© <span id="year"></span> Instant.GH — Photographie de terrain</p><div class="footer-links"><a href="mentions.html">Mentions / informations</a><a href="https://www.instagram.com/instant.gh/" target="_blank" rel="noreferrer">Instagram</a><a href="https://gallienc.myportfolio.com/" target="_blank" rel="noreferrer">Portfolio</a><a href="https://paypal.me/instantGH?locale.x=fr_FR&country.x=FR" target="_blank" rel="noreferrer">Soutenir</a><a href="#accueil">Retour en haut</a></div></footer>
-
-    <script src="script.js?v=20261017" defer></script>
+    <footer class="footer"><p>© <span id="year">2026</span> Instant.GH — Photographie de terrain</p><div class="footer-links"><a href="mentions.html">Mentions et données personnelles</a><a href="https://www.instagram.com/instant.gh/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="#accueil">Retour en haut</a></div></footer>
+    <script src="script.js?v=20261017-2" defer></script>
   </body>
 </html>
