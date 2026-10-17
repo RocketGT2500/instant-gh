@@ -6,7 +6,7 @@ Site vitrine statique de Gallien Humez, publié sur https://instant-gh.fr/ avec 
 
 - index.html : accueil, accès aux dix thèmes, projets, présentation et contact.
 - script.js : menu mobile, galeries, visionneuse, pause du diaporama et chargement du formulaire.
-- catalogue.json : 217 photos, descriptions visuelles et variantes WebP, classées par note Bridge décroissante.
+- catalogue.json : 217 photos, descriptions visuelles et variantes WebP, avec couvertures choisies puis classement par note Bridge décroissante.
 - styles.css : mise en page commune et navigation.
 - catalogue.css : couvertures, galeries et visionneuse.
 - contact-form.css : contact et intégration Tally.
@@ -19,6 +19,9 @@ Site vitrine statique de Gallien Humez, publié sur https://instant-gh.fr/ avec 
 
 Chaque galerie présente d’abord au maximum huit photos. Le bouton « Voir les … photos »
 donne accès à la collection complète ; aucune photographie n’a été retirée.
+La photo choisie dans coverPhotoId est placée en tête et sert aussi au diaporama.
+Les autres images gardent leur ordre relatif. Les couvertures statiques dans index.html
+doivent être actualisées avec le catalogue.
 La visionneuse permet de parcourir toute la catégorie avec les flèches, le clavier
 ou un geste horizontal. Échap ferme la visionneuse et le focus revient à la photo ouverte.
 Sans JavaScript, les couvertures et le lien de secours donnent accès à Adobe Portfolio.
@@ -29,7 +32,7 @@ Le diaporama peut être mis en pause ; il est suspendu hors écran, dans un ongl
 ou pendant l’utilisation de la visionneuse. Il démarre en pause si la réduction des
 animations ou l’économie de données est activée.
 
-Les 217 photos conservent leurs variantes et leur classement : 71 photos à cinq étoiles,
+Les 217 photos conservent leurs variantes et leurs notes : 71 photos à cinq étoiles,
 86 à quatre, 43 à trois, 14 à deux et trois à une étoile.
 Chaque image possède un aperçu de 480 pixels de large au maximum, un aperçu de 960 pixels
 et un agrandissement de 1920 pixels sur le côté long au maximum.

@@ -203,7 +203,8 @@ async function initPhotoSite() {
     const pause = document.getElementById('hero-pause');
     if (!hero || !title || !pause) return;
     const slides = categories.map(category => ({
-      photo: category.photos.find(p => p.medium.src === hero.getAttribute('src'))
+      photo: category.photos.find(p => p.id === category.coverPhotoId)
+        || category.photos.find(p => p.medium.src === hero.getAttribute('src'))
         || category.photos.find(p => p.rating >= 4 && p.medium.width / p.medium.height >= 1.2)
         || category.photos[0],
       title: category.title
@@ -255,7 +256,7 @@ async function initPhotoSite() {
 
   async function loadCatalogue() {
     try {
-      const response = await fetch('catalogue.json?v=20261017-2');
+      const response = await fetch('catalogue.json?v=20261017-3');
       if (!response.ok) throw new Error('Catalogue indisponible');
       const catalogue = await response.json();
       if (!Array.isArray(catalogue.categories) || !catalogue.categories.length
