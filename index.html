@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Instant.GH - Photographie de terrain entre Cholet, Clisson et Nantes : moto, sport, aviation, animalier, concerts, défense, portraits et événements locaux." />
+    <meta name="description" content="Instant.GH - Photographie de terrain entre Cholet, Clisson et Nantes : moto, automobiles, sport, aviation, animalier, paysages, concerts, portraits et événements locaux." />
     <title>Instant.GH — Photographie de terrain en Pays de la Loire</title>
     <link rel="canonical" href="https://instant-gh.fr/" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="photo-fixes.css" />
     <link rel="stylesheet" href="site-upgrades.css" />
     <link rel="stylesheet" href="contact-form.css" />
+    <link rel="stylesheet" href="catalogue.css?v=20261017" />
   </head>
   <body>
+    <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
     <header class="site-header" id="accueil">
       <nav class="nav">
         <a class="brand" href="#accueil">
@@ -33,15 +35,15 @@
         <div class="hero-copy reveal">
           <p class="eyebrow">Cholet · Clisson · Nantes · Pays de la Loire</p>
           <h1>Lumière. Mouvement. Instant.</h1>
-          <p class="hero-text">Instant.GH rassemble des séries photo de terrain : moto, sport, aviation, animalier, concerts, défense, portraits et événements locaux. L’envie est simple : immortaliser un moment, saisir une émotion, figer le temps avant qu’il ne disparaisse.</p>
+          <p class="hero-text">Instant.GH rassemble des séries photo de terrain : moto, automobiles, sport, aviation, animalier, paysages, concerts, portraits et événements locaux. L’envie est simple : immortaliser un moment, saisir une émotion, figer le temps avant qu’il ne disparaisse.</p>
           <div class="hero-actions">
             <a class="button primary" href="#contact">Me contacter</a>
             <a class="button ghost" href="#series">Voir les séries</a>
           </div>
         </div>
         <div class="hero-card reveal photo-card-main">
-          <img id="hero-carousel-image" src="assets/photos/Moto &amp; mécanique/Moto_&amp;_mécanique_14.jpg?v=20260810-2323" alt="Photographie de terrain Instant.GH" class="photo-fill" />
-          <div class="photo-overlay"><strong id="hero-carousel-title">Puissance · Mouvement · Terrain</strong></div>
+          <img id="hero-carousel-image" src="assets/catalogue/moto-mecanique/001-01-l-esprit-du-rendez-vous-4d0a2315-89b86d45a7-medium.webp" srcset="assets/catalogue/moto-mecanique/001-01-l-esprit-du-rendez-vous-4d0a2315-89b86d45a7-small.webp 480w, assets/catalogue/moto-mecanique/001-01-l-esprit-du-rendez-vous-4d0a2315-89b86d45a7-medium.webp 960w" sizes="(max-width: 860px) calc(100vw - 32px), (max-width: 1212px) 42vw, 513px" width="960" height="1439" alt="Motos et esprit biker · photographie 001 · Instant.GH" class="photo-fill" fetchpriority="high" decoding="async" />
+          <div class="photo-overlay"><strong id="hero-carousel-title">Motos et esprit biker</strong></div>
         </div>
       </section>
     </header>
@@ -66,7 +68,8 @@
 
       <section class="section dark" id="series">
         <div class="section-heading reveal"><p class="eyebrow">Séries</p><h2>Des galeries par thème.</h2></div>
-        <div class="category-list" id="category-list"></div>
+        <div class="category-list" id="category-list" aria-label="Galeries photo"></div>
+        <noscript><p>Pour parcourir les galeries interactives, activez JavaScript ou <a href="https://gallienc.myportfolio.com/">consultez le portfolio photo</a>.</p></noscript>
       </section>
 
       <section class="section" id="portfolio">
@@ -103,149 +106,13 @@
       <section class="contact-section" id="contact">
         <div class="contact-card reveal">
           <div><p class="eyebrow">Contact</p><h2>Un projet, une série, un événement à couvrir.</h2><p>Décrivez simplement le sujet, le lieu, la période et l’usage souhaité des images. Je vous répondrai pour voir ce qu’il est possible de construire.</p><div class="contact-actions contact-socials"><a class="button dark-button" href="https://www.instagram.com/instant.gh/" target="_blank" rel="noreferrer">Instagram · instant.gh</a><a class="button ghost light-ghost" href="https://gallienc.myportfolio.com/" target="_blank" rel="noreferrer">Portfolio complet</a></div></div>
-          <div class="tally-embed-card"><p class="eyebrow">Formulaire</p><h3>Demande photo — Instant.GH</h3><p>Remplissez le formulaire ci-dessous pour préciser le sujet, le lieu, la période envisagée et le contexte de la série.</p><iframe src="https://tally.so/embed/816pel?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="720" frameborder="0" marginheight="0" marginwidth="0" title="Demande photo — Instant.GH"></iframe></div>
+          <div class="tally-embed-card"><p class="eyebrow">Formulaire</p><h3>Demande photo — Instant.GH</h3><p>Remplissez le formulaire ci-dessous pour préciser le sujet, le lieu, la période envisagée et le contexte de la série.</p><iframe loading="lazy" src="https://tally.so/embed/816pel?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="720" frameborder="0" marginheight="0" marginwidth="0" title="Demande photo — Instant.GH"></iframe></div>
         </div>
       </section>
     </main>
 
     <footer class="footer"><p>© <span id="year"></span> Instant.GH — Photographie de terrain</p><div class="footer-links"><a href="mentions.html">Mentions / informations</a><a href="https://www.instagram.com/instant.gh/" target="_blank" rel="noreferrer">Instagram</a><a href="https://gallienc.myportfolio.com/" target="_blank" rel="noreferrer">Portfolio</a><a href="https://paypal.me/instantGH?locale.x=fr_FR&country.x=FR" target="_blank" rel="noreferrer">Soutenir</a><a href="#accueil">Retour en haut</a></div></footer>
 
-    <script>
-      const PHOTO_VERSION = "20260810-2323";
-      const photo = src => `${src}?v=${PHOTO_VERSION}`;
-      const seq = (folder, prefix, start, end, pad = 2) => Array.from({length: end-start+1}, (_, i) => photo(`${folder}/${prefix}${String(start+i).padStart(pad,'0')}.jpg`));
-
-      const categories = [
-        {
-          id: "moto-mecanique",
-          title: "Moto & mécanique",
-          cover: photo("assets/photos/Moto & mécanique/Moto_&_mécanique_14.jpg"),
-          images: seq("assets/photos/Moto & mécanique", "Moto_&_mécanique_", 1, 43),
-          text: "Motos en action, portraits de motards, détails mécaniques et machines de caractère.",
-          tags: ["motos", "mécanique", "action", "portraits motards"]
-        },
-        {
-          id: "sport-collectifs",
-          title: "Sport & collectifs",
-          cover: photo("assets/photos/Sport & collectifs/Sport_&_collectifs_08.jpg"),
-          images: seq("assets/photos/Sport & collectifs", "Sport_&_collectifs_", 1, 14),
-          text: "Le sport comme sujet de tension collective : groupe, portraits, action, regard de match.",
-          tags: ["hockey", "collectif", "action glace", "portraits joueurs"]
-        },
-        {
-          id: "aviation",
-          title: "Aviation",
-          cover: photo("assets/photos/Aviation/aviation-01.jpg"),
-          images: ["assets/photos/Aviation/aviation-01.jpg","assets/photos/Aviation/aviation-02.jpg","assets/photos/Aviation/aviation-3.jpg","assets/photos/Aviation/aviation-04.jpg","assets/photos/Aviation/aviation-05.jpg","assets/photos/Aviation/aviation-06.jpg","assets/photos/Aviation/aviation-07.jpg","assets/photos/Aviation/aviation-08.jpg","assets/photos/Aviation/aviation-09.jpg","assets/photos/Aviation/aviation-10.jpg"].map(photo),
-          text: "Meetings aériens, patrouilles, acrobaties et machines de légende.",
-          tags: ["meetings aériens", "patrouilles", "acrobaties", "machines"]
-        },
-        {
-          id: "evenementiel",
-          title: "Événementiel",
-          cover: photo("assets/photos/Événementiel/evenementiel_01.jpg"),
-          images: seq("assets/photos/Événementiel", "evenementiel_", 1, 28),
-          text: "Concerts, festivals, scènes nocturnes, reconstitution et ambiances fortes.",
-          tags: ["concerts", "festivals", "événements nocturnes", "reconstitution"]
-        },
-        {
-          id: "defense-defiles",
-          title: "Défense & défilés",
-          cover: photo("assets/photos/Défense & défilés/Défense_&_défilés_001.jpg"),
-          images: seq("assets/photos/Défense & défilés", "Défense_&_défilés_", 1, 23, 3),
-          text: "Action, poussière, blindés, défilés et scènes de terrain.",
-          tags: ["blindés", "défilés", "cavalerie", "terrain"]
-        },
-        {
-          id: "animalier",
-          title: "Animalier",
-          cover: photo("assets/photos/Animalier/Animalier_01.jpg"),
-          images: seq("assets/photos/Animalier", "Animalier_", 1, 29),
-          text: "Regards, instinct, présence et détails naturels.",
-          tags: ["faune", "oiseaux", "macro", "animaux de compagnie"]
-        },
-        {
-          id: "portrait",
-          title: "Portrait",
-          cover: photo("assets/photos/Portrait/Portrait_11.jpg"),
-          images: seq("assets/photos/Portrait", "Portrait_", 1, 16),
-          text: "Portraits dynamiques, en situation, liés à un univers.",
-          tags: ["sportifs", "musiciens", "artisans", "motards"]
-        }
-      ];
-
-      const altTexts = {
-        "moto-mecanique": "Moto et mécanique, mouvement et détails, photographie Instant.GH en Pays de la Loire",
-        "sport-collectifs": "Sport collectif et hockey, action et ambiance de groupe, photographie Instant.GH",
-        "aviation": "Aviation et meeting aérien, appareil en vol, photographie Instant.GH",
-        "evenementiel": "Événement local, scène ou ambiance nocturne, photographie Instant.GH",
-        "defense-defiles": "Défense, défilé ou blindé en action, photographie Instant.GH",
-        "animalier": "Portrait animalier, regard et présence naturelle, photographie Instant.GH",
-        "portrait": "Portrait en situation, lumière et présence, photographie Instant.GH"
-      };
-
-      const heroImages = [
-        [photo("assets/photos/Moto & mécanique/Moto_&_mécanique_14.jpg"), "Puissance · Mouvement · Terrain"],
-        [photo("assets/photos/Moto & mécanique/Moto_&_mécanique_01.jpg"), "Vitesse · Route · Instinct"],
-        [photo("assets/photos/Moto & mécanique/Moto_&_mécanique_39.jpg"), "Mécanique · Ligne · Caractère"],
-        [photo("assets/photos/Aviation/aviation-01.jpg"), "Précision · Ciel · Vitesse"],
-        [photo("assets/photos/Animalier/Animalier_01.jpg"), "Regard · Instinct · Présence"],
-        [photo("assets/photos/Animalier/Animalier_10.jpg"), "Présence · Regard · Nature"],
-        [photo("assets/photos/Défense & défilés/Défense_&_défilés_001.jpg"), "Action · Poussière · Terrain"],
-        [photo("assets/photos/Sport & collectifs/Sport_&_collectifs_08.jpg"), "Collectif · Tension · Geste"],
-        [photo("assets/photos/Événementiel/evenementiel_01.jpg"), "Lumière · Scène · Émotion"],
-        [photo("assets/photos/Événementiel/evenementiel_28.jpg"), "Événement · Moment · Mémoire"],
-        [photo("assets/photos/Portrait/Portrait_11.jpg"), "Portrait · Présence · Instant"]
-      ];
-
-      const escapeHtml = value => String(value).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
-      const categoryList = document.getElementById('category-list');
-
-      categories.forEach(cat => {
-        const article = document.createElement('article');
-        article.className = 'category-block reveal';
-        article.id = cat.id;
-        const tags = cat.tags.map(t => `<span>${escapeHtml(t)}</span>`).join('');
-        const imgs = cat.images.map((src,index) => `<img loading="lazy" decoding="async" src="${escapeHtml(src)}" alt="${escapeHtml(`${altTexts[cat.id]} ${String(index+1).padStart(2,'0')}`)}" onerror="this.remove()" />`).join('');
-        article.innerHTML = `<div class="category-head"><div><h3>${escapeHtml(cat.title)}</h3><p>${escapeHtml(cat.text)}</p></div><div class="gallery-actions"><button class="scroll-gallery-button" type="button">Faire défiler →</button><button class="toggle-gallery-button" type="button">Tout afficher</button></div></div><div class="category-meta">${tags}</div><div class="category-gallery horizontal-gallery">${imgs}</div>`;
-        categoryList.appendChild(article);
-      });
-
-      document.querySelectorAll('.scroll-gallery-button').forEach(button => button.addEventListener('click', () => {
-        const block = button.closest('.category-block');
-        const gallery = block.querySelector('.category-gallery');
-        gallery.classList.remove('expanded-gallery');
-        block.querySelector('.toggle-gallery-button').textContent = 'Tout afficher';
-        gallery.scrollBy({left: gallery.clientWidth * .85, behavior:'smooth'});
-      }));
-
-      document.querySelectorAll('.toggle-gallery-button').forEach(button => button.addEventListener('click', () => {
-        const gallery = button.closest('.category-block').querySelector('.category-gallery');
-        gallery.classList.toggle('expanded-gallery');
-        button.textContent = gallery.classList.contains('expanded-gallery') ? 'Réduire' : 'Tout afficher';
-      }));
-
-      const shuffle = array => {
-        const copy=[...array];
-        for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}
-        return copy;
-      };
-      let heroSequence=shuffle(heroImages), heroIndex=0;
-      const heroImg=document.getElementById('hero-carousel-image');
-      const heroTitle=document.getElementById('hero-carousel-title');
-      const applyHero=([src,title],immediate=false)=>{
-        if(!heroImg||!heroTitle)return;
-        if(immediate){heroImg.src=src;heroTitle.textContent=title;return;}
-        heroImg.classList.add('is-changing'); heroTitle.classList.add('is-changing');
-        setTimeout(()=>{heroImg.src=src;heroTitle.textContent=title;},420);
-        setTimeout(()=>{heroImg.classList.remove('is-changing');heroTitle.classList.remove('is-changing');},620);
-      };
-      if(heroImg&&heroTitle){
-        heroImg.onerror=()=>{heroIndex=(heroIndex+1)%heroSequence.length;applyHero(heroSequence[heroIndex],true);};
-        applyHero(heroSequence[heroIndex],true);
-        setInterval(()=>{heroIndex++;if(heroIndex>=heroSequence.length){heroSequence=shuffle(heroImages);heroIndex=0;}applyHero(heroSequence[heroIndex]);},5200);
-      }
-    </script>
-    <script src="script.js?v=20260810-2323"></script>
+    <script src="script.js?v=20261017" defer></script>
   </body>
 </html>

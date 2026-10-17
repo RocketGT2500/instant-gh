@@ -1,0 +1,37 @@
+.horizontal-gallery .gallery-photo {
+  flex: 0 0 min(360px, 82vw);
+  display: block;
+  min-width: 0;
+  scroll-snap-align: start;
+  border-radius: 18px;
+  background: #070707;
+}
+.horizontal-gallery .gallery-photo img {
+  width: 100%;
+  flex: none;
+  color: #bdbdc7;
+}
+.expanded-gallery.horizontal-gallery .gallery-photo { width: 100%; }
+.gallery-photo:focus-visible { outline: 3px solid #fff; outline-offset: -4px; }
+.photo-unavailable::after { content: 'Ouvrir la photo'; display: block; padding: 12px; text-align: center; }
+dialog.lightbox {
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  color: #fff;
+}
+dialog.lightbox[open] { display: flex; }
+dialog.lightbox::backdrop { background: #050505; }
+.lightbox-image { pointer-events: none; }
+.lightbox-caption { pointer-events: none; }
+.hero-copy.reveal, .hero-card.reveal { opacity: 1; transform: none; }
+@media (max-width: 860px) {
+  .horizontal-gallery .gallery-photo { flex-basis: min(86vw, 100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .photo-card-main .photo-fill, .lightbox-image { transition: none; transform: none; }
+}
