@@ -1,45 +1,65 @@
 # Instant.GH — Site photo
 
-Site vitrine pour presenter l'activite photo Instant.GH : demarche, univers, projets, prestations et contact.
+Site vitrine statique de Gallien Humez, publié sur https://instant-gh.fr/ avec GitHub Pages.
 
 ## Fichiers principaux
 
-- `index.html` : structure du site
-- `styles.css` : mise en forme
-- `script.js` : menu mobile et animations
-- `catalogue.json` : 217 photographies classées dans dix galeries, par note Bridge décroissante
-- `assets/catalogue/` : copies WebP optimisées, sans métadonnées EXIF/XMP
-- `catalogue.css` : présentation des galeries et de la visionneuse
+- index.html : accueil, accès aux dix thèmes, projets, présentation et contact.
+- script.js : menu mobile, galeries, visionneuse, pause du diaporama et chargement du formulaire.
+- catalogue.json : 217 photos, descriptions visuelles et variantes WebP, classées par note Bridge décroissante.
+- styles.css : mise en page commune et navigation.
+- catalogue.css : couvertures, galeries et visionneuse.
+- contact-form.css : contact et intégration Tally.
+- mentions.html : informations sur l’éditeur, les photographies et les données personnelles.
+- merci.html : page de remerciement conservée pour les liens et éventuelles redirections existants.
+- favicon.svg, robots.txt, sitemap.xml : icône et informations de découverte du site.
+- assets/catalogue/ : copies WebP optimisées, sans métadonnées EXIF/XMP.
 
-## Catalogue photo — 17 octobre 2026
+## Galeries et accessibilité
 
-Le catalogue reprend les 71 photos à 5 étoiles, 86 à 4 étoiles, 43 à 3 étoiles,
-14 à 2 étoiles et 3 à 1 étoile. Les 246 images sans note sont exclues.
-Les originaux et leurs notes ne sont jamais modifiés par le site.
+Chaque galerie présente d’abord au maximum huit photos. Le bouton « Voir les … photos »
+donne accès à la collection complète ; aucune photographie n’a été retirée.
+La visionneuse permet de parcourir toute la catégorie avec les flèches, le clavier
+ou un geste horizontal. Échap ferme la visionneuse et le focus revient à la photo ouverte.
+Sans JavaScript, les couvertures et le lien de secours donnent accès à Adobe Portfolio.
 
-Chaque photo possède trois copies WebP : aperçu de 480 pixels de large au maximum
-(60 Ko maximum), aperçu de 960 pixels de large au maximum (150 Ko maximum),
-et agrandissement de 1920 pixels sur le côté long au maximum (350 Ko maximum).
-Les proportions et l'orientation sont conservées ; les couleurs sont converties
-en sRGB si nécessaire. Le catalogue complet représente environ 46,5 Mo pour
-les trois variantes, qui ne sont jamais téléchargées toutes ensemble.
+Les images des galeries ne sont chargées qu’à proximité de la zone visible.
+Les agrandissements ne sont chargés qu’à l’ouverture de la visionneuse.
+Le diaporama peut être mis en pause ; il est suspendu hors écran, dans un onglet masqué
+ou pendant l’utilisation de la visionneuse. Il démarre en pause si la réduction des
+animations ou l’économie de données est activée.
 
-Le navigateur choisit l'aperçu adapté à l'écran. Seuls les aperçus proches de la
-zone visible sont chargés, y compris dans les galeries horizontales. La grande
-image est chargée à l'ouverture de la visionneuse. Le carrousel s'arrête hors de
-l'écran, dans un onglet masqué et en mode économie de données ou réduction des
-animations. Le formulaire externe est également chargé à la demande.
+Les 217 photos conservent leurs variantes et leur classement : 71 photos à cinq étoiles,
+86 à quatre, 43 à trois, 14 à deux et trois à une étoile.
+Chaque image possède un aperçu de 480 pixels de large au maximum, un aperçu de 960 pixels
+et un agrandissement de 1920 pixels sur le côté long au maximum.
+Les trois variantes représentent environ 46,5 Mo et ne sont pas chargées toutes ensemble.
 
-## Mise en ligne GitHub Pages
+## Formulaire Tally
 
-Dans le depot GitHub :
+Le formulaire 816pel est intégré avec data-tally-src et dynamicHeight=1.
+Le script officiel https://tally.so/widgets/embed.js est chargé à l’approche de la section
+Contact, puis Tally.loadEmbeds() initialise le formulaire et sa hauteur automatique.
+Un lien direct vers Tally et une adresse email restent disponibles si l’intégration échoue.
+Les données personnelles sont décrites dans mentions.html et rappelées à côté du formulaire.
+Les réglages du formulaire, ses destinataires, sa conservation et ses notifications se
+gèrent dans le compte Tally ; ils ne sont pas modifiés par le code de ce dépôt.
 
-1. Aller dans **Settings**
-2. Ouvrir **Pages**
-3. Dans **Build and deployment**, choisir :
-   - Source : `Deploy from a branch`
-   - Branch : `main`
-   - Folder : `/root`
-4. Cliquer sur **Save**
+## Vérifications locales
 
-Le site sera ensuite disponible via l'adresse GitHub Pages indiquee par GitHub.
+Aucune compilation ni installation de dépendances n’est nécessaire.
+Depuis ce dossier, lancer un serveur statique, par exemple avec Python :
+
+    python -m http.server 8000 --bind 127.0.0.1
+
+Ouvrir ensuite http://127.0.0.1:8000/ et vérifier :
+
+- les galeries, le mode complet, les liens vers les thèmes et la visionneuse ;
+- la pause du diaporama et la fermeture du menu mobile ;
+- la hauteur du formulaire et ses liens de secours, sans soumettre de demande de test ;
+- les pages mentions.html et merci.html, notamment leur navigation sur petit écran.
+
+## Publication
+
+GitHub Pages utilise la branche main et le dossier racine.
+Le fichier CNAME conserve le domaine instant-gh.fr.
