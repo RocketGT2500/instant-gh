@@ -73,7 +73,7 @@ async function initPhotoSite() {
     const request = ++imageRequest;
     activeIndex = (index + activeCategory.photos.length) % activeCategory.photos.length;
     const photo = activeCategory.photos[activeIndex];
-    lightboxCaption.textContent = `${activeIndex + 1} / ${activeCategory.photos.length} — ${photo.alt}`;
+    lightboxCaption.textContent = `${activeIndex + 1} / ${activeCategory.photos.length} — ${photo.title || photo.alt}`;
     lightboxImage.src = photo.medium.src;
     lightboxImage.alt = photo.alt;
     lightbox.setAttribute('aria-busy', 'true');
@@ -138,7 +138,7 @@ async function initPhotoSite() {
         link.className = 'gallery-photo';
         link.href = photo.full.src;
         link.hidden = index >= previewCount;
-        link.setAttribute('aria-label', `Agrandir : ${photo.alt}`);
+        link.setAttribute('aria-label', `Agrandir : ${photo.title || photo.alt}`);
         const img = document.createElement('img');
         img.width = photo.small.width;
         img.height = photo.small.height;
@@ -256,7 +256,7 @@ async function initPhotoSite() {
 
   async function loadCatalogue() {
     try {
-      const response = await fetch('catalogue.json?v=20261017-4');
+      const response = await fetch('catalogue.json?v=20261019-1');
       if (!response.ok) throw new Error('Catalogue indisponible');
       const catalogue = await response.json();
       if (!Array.isArray(catalogue.categories) || !catalogue.categories.length
